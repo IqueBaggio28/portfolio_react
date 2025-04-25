@@ -11,7 +11,7 @@ const Header = ({ setNavBarOpen }) => {
         <div className="fixed top-0 left-0 z-30">
             <div className="hidden h-10 sm:bg-gray-400 sm:block "></div>
             <div className="h-20 w-full flex items-center pl-7 sm:hidden" >
-                <Button onClick={()=> setNavBarOpen(prev => !prev)} >
+                <Button onClick={()=> setNavBarOpen(prev => !prev)} className="bg-[var(--clr-dark)]" >
                     <FontAwesomeIcon icon={faBars} size="xl" />
                 </Button>
             </div>
