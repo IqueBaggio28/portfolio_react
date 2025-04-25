@@ -10,7 +10,7 @@ const NavBar = ({navBarOpen, setNavBarOpen}) => {
 
     return (
         navBarOpen && (
-            <div className="h-screen w-full z-50 absolute top-0 left-0 bg-black shadow-lg ">
+            <div className="h-screen w-full z-50 absolute top-0 left-0 bg-[var(--clr-dark)] sm:hidden">
                 <div className="h-20 w-full flex items-center pl-7 absolute" >
                     <Button onClick={()=> setNavBarOpen(prev => !prev)} >
                         <FontAwesomeIcon icon={faBars} size="xl" />

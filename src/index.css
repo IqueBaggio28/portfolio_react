@@ -99,7 +99,7 @@ img{
 
 button{
   /*display: inline-block;*/
-  border: none;
+  /*border: none;*/
   cursor: pointer;
   color: inherit;
 }
