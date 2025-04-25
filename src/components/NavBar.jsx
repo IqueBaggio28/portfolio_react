@@ -1,7 +1,10 @@
 import React from 'react';
 import {Button} from "@/components/ui/button.jsx";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faFile } from '@fortawesome/free-solid-svg-icons'
 import {faBars} from "@fortawesome/free-solid-svg-icons";
+
 
 const NavBar = ({navBarOpen, setNavBarOpen}) => {
 
@@ -14,11 +17,18 @@ const NavBar = ({navBarOpen, setNavBarOpen}) => {
                     </Button>
                 </div>
 
-                <div className="flex h-full items-center justify-center pb-3">
-                    <ul className="flex flex-col gap-4">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                <div className="flex flex-col h-full items-center justify-center pb-3">
+                    <ul className="flex flex-col gap-4 items-center">
+                        <li><a href="#about">
+                            <FontAwesomeIcon icon={faFile} size="3x" color={'var(--clr-light)'} />
+                        </a></li>
+                        <li><a href="#projects">
+                            <FontAwesomeIcon icon={faLinkedin} size="3x" color={'var(--clr-light)'} />
+                        </a></li>
+                        <li><a href="#contact">
+                            <FontAwesomeIcon icon={faGithub} size="3x" color={'var(--clr-light)'} />
+                        </a></li>
+                        <li><button className="btn w-fit mt-4 border-t-white">Contact</button></li>
                     </ul>
                 </div>
             </div>
