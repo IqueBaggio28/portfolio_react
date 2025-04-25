@@ -49,6 +49,11 @@
     position: relative;
     top: 2px;
   }
+
+  .sectionHeader {
+    @apply text-center text-[var(--clr-slate700)] mb-8 opacity-70 tracking-[0.6rem] text-4xl font-black;
+  }
+
 }
 
 
