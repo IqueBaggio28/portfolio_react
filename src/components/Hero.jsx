@@ -18,18 +18,18 @@ const Hero = () => {
 
 
             <div className="flex flex-wrap gap-4 justify-center">
-                <button className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl">
+                <a className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
                     About
-                </button>
-                <button className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl">
+                </a>
+                <a className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
                     Experience
-                </button>
-                <button className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl">
+                </a>
+                <a className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
                     Skills
-                </button>
-                <button className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl">
+                </a>
+                <a className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
                     Projects
-                </button>
+                </a>
             </div>
 
 
