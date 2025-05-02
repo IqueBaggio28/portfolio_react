@@ -17,7 +17,7 @@ const About = ({sectionHeader}) => {
 
 
     return(
-        <section id="about" className="h-screen flex flex-col gap-4 items-center justify-center min-h-screen px-10">
+        <section id="about" className="container_sec">
             <h2 className='sectionHeader'>{sectionHeader}</h2>
             <div className="flex flex-col gap-12">
                 {aboutMsg.map(({title, goals}) => (

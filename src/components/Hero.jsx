@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar.jsx"
 const Hero = () => {
     return (
 
-        <section className="h-screen flex flex-col gap-4 items-center justify-center min-h-screen px-10">
+        <section className="container_sec">
             <Avatar className="w-30 h-30 overflow-hidden">
                 <AvatarImage src="hero_img.jpg" className='rounded-full object-cover object-top scale-125 ' />
             </Avatar>
@@ -18,7 +18,7 @@ const Hero = () => {
 
 
             <div className="flex flex-wrap gap-4 justify-center">
-                <a className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
+                <a href="#about" className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
                     About
                 </a>
                 <a className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">

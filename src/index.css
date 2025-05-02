@@ -54,6 +54,9 @@
     @apply text-center text-[var(--clr-slate700)] mb-8 opacity-70 tracking-[0.6rem] text-4xl font-black;
   }
 
+  .container_sec {
+    @apply h-screen flex flex-col gap-4 items-center justify-center min-h-screen px-10;
+  }
 }
 
 
