@@ -6,7 +6,7 @@ const Hero = () => {
 
         <section className="container_sec">
             <Avatar className="w-30 h-30 overflow-hidden">
-                <AvatarImage src="hero_img.jpg" className='rounded-full object-cover object-top scale-125 ' />
+                <AvatarImage src="images/hero_img.jpg" className='rounded-full object-cover object-top scale-125 ' />
             </Avatar>
 
             <h3 className="text-[var(--clr-slate600)] text-lg font-bold " >Hi, my name is Henrique</h3>
@@ -21,7 +21,7 @@ const Hero = () => {
                 <a href="#about" className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
                     About
                 </a>
-                <a className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
+                <a href="#experience" className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
                     Experience
                 </a>
                 <a className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
