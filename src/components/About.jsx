@@ -20,14 +20,26 @@ const About = ({sectionHeader}) => {
         <section id="about" className="container_sec">
             <h2 className='sectionHeader'>{sectionHeader}</h2>
             <div className="flex flex-col gap-12">
-                {aboutMsg.map(({title, goals}) => (
-                    <div>
-                        <h3 className="font-bold text-2xl text-[var(--clr-slate600)] block border-b border-[var(--clr-orange)] mb-3">{title}</h3>
+                {aboutMsg.map(({title, goals}, index) => (
+                    <div key={index}>
+                        <h3 className="font-bold text-2xl text-[var(--clr-slate600)] block border-b border-[var(--clr-orange)] pb-2 mb-3">{title}</h3>
                         <p className="text-[var(--clr-light)]"><span className="mx-5"></span>{goals}</p>
 
                     </div>
                 ))}
             </div>
+            {/*<div>*/}
+            {/*    <button popoverTarget="my-popover">Check for updates</button>*/}
+
+            {/*    <div*/}
+            {/*        popover="auto"*/}
+            {/*        id="my-popover"*/}
+            {/*        className="opacity-0 transition-opacity w-60 h-60 duration-300 ease-in-out [popover]:opacity-100 [open]:opacity-100 p-4 bg-white border rounded shadow z-10"*/}
+            {/*    >*/}
+            {/*        hello*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+
         </section>
     )
 }

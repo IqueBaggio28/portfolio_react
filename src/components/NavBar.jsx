@@ -24,7 +24,7 @@ const NavBar = ({navBarOpen, setNavBarOpen}) => {
 
     return (
         navBarOpen && (
-            <div className="h-screen w-full z-50 absolute  left-0 bg-[var(--clr-dark)] overflow-x-hidden sm:hidden">
+            <div className="h-screen w-full z-50 absolute top-[1000px] left-0 bg-[var(--clr-dark)] overflow-x-hidden sm:hidden">
                 <div className="h-20 w-full flex items-center pl-7 absolute" >
                     <Button onClick={()=> setNavBarOpen(prev => !prev)} className="bg-[var(--clr-dark)]" >
                         <FontAwesomeIcon icon={faBars} size="xl" />

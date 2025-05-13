@@ -12,8 +12,8 @@ const Hero = () => {
             <h3 className="text-[var(--clr-slate600)] text-lg font-bold " >Hi, my name is Henrique</h3>
             <h1 className="text-4xl font-black text-center text-[var(--clr-slate400)] text-wrap px-20">SOFTWARE ENGINEER</h1>
             <p className="text-center text-[var(--clr-slate600)] font-medium">A dedicated Software Engineering and passionate developer with hands-on experience in full-stack development.
-                <span class="text-orange-500 font-semibold">Proficient in JavaScript (React), Python, C++, and PHP</span>, with a strong foundation in
-                <span class="text-teal-400">object-oriented programming, data structures, algorithms, and SQL</span>.
+                <span className="text-orange-500 font-semibold">Proficient in JavaScript (React), Python, C++, and PHP</span>, with a strong foundation in
+                <span className="text-teal-400">object-oriented programming, data structures, algorithms, and SQL</span>.
                 I’ve contributed to real-world applications through internships, research, and teaching, and I’m always looking to build solutions that make an impact.</p>
 
 
