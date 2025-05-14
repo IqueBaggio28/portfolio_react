@@ -24,15 +24,13 @@ const Hero = () => {
                 <a href="#experience" className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
                     Experience
                 </a>
-                <a className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
+                <a href="#skills" className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
                     Skills
                 </a>
                 <a className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
                     Projects
                 </a>
             </div>
-
-
         </section>
 
     )

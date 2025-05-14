@@ -28,18 +28,6 @@ const About = ({sectionHeader}) => {
                     </div>
                 ))}
             </div>
-            {/*<div>*/}
-            {/*    <button popoverTarget="my-popover">Check for updates</button>*/}
-
-            {/*    <div*/}
-            {/*        popover="auto"*/}
-            {/*        id="my-popover"*/}
-            {/*        className="opacity-0 transition-opacity w-60 h-60 duration-300 ease-in-out [popover]:opacity-100 [open]:opacity-100 p-4 bg-white border rounded shadow z-10"*/}
-            {/*    >*/}
-            {/*        hello*/}
-            {/*    </div>*/}
-            {/*</div>*/}
-
         </section>
     )
 }

@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Experience from "./components/Experience.jsx";
+import Skills from "./components/Skills.jsx";
 function App() {
 
   const [navBarOpen, setNavBarOpen] = useState(false);
@@ -18,6 +19,7 @@ function App() {
         <Hero />
         <About sectionHeader="About Me"/>
         <Experience sectionHeader="Experience"/>
+        <Skills sectionHeader="Skills" />
     </>
   );
 }

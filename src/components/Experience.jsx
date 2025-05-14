@@ -3,7 +3,7 @@ import {Avatar, AvatarImage} from "@/components/ui/avatar.jsx";
 import { faJsSquare, faCss, faHtml5, faPhp, faPython, faJava, faAws } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase, faArrowUp, faArrowUpRightFromSquare, faClose } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-// import {faClose} from "@fortawesome/free-solid-svg-icons/faClose";
+
 
 
 
@@ -60,11 +60,6 @@ const Experience = ({sectionHeader}) => {
                     onClick={() => setExpandedIndex(index)}
                     key={index}
                     className={`w-full pt-6 pb-3 px-6  relative border border-[var(--clr-teal)] rounded-lg max-w-[500px] flex flex-col justify-between items-center bg-[var(--clr-darker)] transition-all duration-400 ease-in-out  ${expandedIndex === index ? 'min-h-[700px]' : 'min-h-60 cursor-pointer hover:translate-z-[200px] hover:brightness-100 hover:scale-[1.1] hover:md:scale-[1.2] '} `}>
-                        {/*Arrow up for link*/}
-                                                                                                                                                                                                                                            {/*:hover{
-                                                                                                                                                                                                                        transform: translateZ(200px);
-                                                                                                                                                                                                                        filter: brightness(1);
-                                                                                                                                                                                                                        scale: 1.2;*/}
                         {expandedIndex === index  ? (
                                 <>
                                     <button className="absolute top-2 right-3 opacity-30 p-4" onClick={(e) => {
@@ -152,8 +147,6 @@ const Experience = ({sectionHeader}) => {
 
                                 </>)
                         }
-
-
                     </div>
                 ))}
             </div>
