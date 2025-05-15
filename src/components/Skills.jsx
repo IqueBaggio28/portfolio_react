@@ -23,7 +23,7 @@ const Skills = ({sectionHeader}) =>{
             name: 'JavaScript',
             icon: faJsSquare,
             color: 'yellow',
-            level: 7,
+            level: 10,
             description: 'JavaScript is a versatile, high-level programming language widely used to create dynamic and interactive web applications. It powers everything from form validation and real-time updates to full-scale frontend frameworks like React and backend development with Node.js, making it an essential tool for modern full-stack developers.'
         },
         {
@@ -120,7 +120,7 @@ const Skills = ({sectionHeader}) =>{
     const [pDescription, setPDescription] = useState("Click for more!");
 
     useEffect(() => {
-        if (!techIndex) return setPDescription('Click for More!');
+        if (techIndex == null) return setPDescription('Click for More!');
 
         setPDescription(technologies[techIndex]?.description);
 
@@ -138,7 +138,7 @@ const Skills = ({sectionHeader}) =>{
         <section id="skills" className="container_sec">
             <h2 className='sectionHeader'>{sectionHeader}</h2>
 
-            <div className="grid grid-rows-2 place-items-center gap-20  lg:grid-cols-2 lg:grid-rows-0 lg:justify-between ">
+            <div className="grid grid-rows-2 place-items-center gap-20  lg:grid-cols-2 lg:grid-rows-0 lg:justify-between flex-grow-0 ">
                 <div className="grid grid-cols-3 grid-rows-4 gap-4  md:grid-cols-4">
                     {technologies.map(({name, icon, color, level}, index) => (
                         name !== 'empty'
@@ -155,10 +155,26 @@ const Skills = ({sectionHeader}) =>{
 
                     ))}
                 </div>
-                <div className="relative h-full mx-10 grid place-items-center">
+                <div className="relative h-full  mx-10 grid place-items-center md:w-[520px]">
                     <div>
                         <p className="text-2xl text-center">{pDescription}</p>
-                        {techIndex && (<p className="absolute bottom-0 right-0">Proficiency: {technologies[techIndex]?.level} / 10</p>)}
+                    </div>
+
+                    <div className={`absolute right-0 bottom-0 transition-opacity duration-300 ${techIndex === null ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+                        <div className="flex items-center justify-between">
+                            <p>Experience: </p>
+                            <p>{technologies[techIndex]?.level} / 10</p>
+                        </div>
+                        <div className="w-42 h-7 border-2 flex gap-1 justify-start items-center px-1 relative">
+                            <div className="absolute -left-1 -bottom-1 bg-[var(--clr-dark)] w-1 h-1"></div>
+                            <div className="absolute -right-1 -top-1 bg-[var(--clr-dark)] w-1 h-1"></div>
+                            <div className="absolute -left-1 -top-1 bg-[var(--clr-dark)] w-1 h-1"></div>
+                            <div className="absolute -right-1 -bottom-1 bg-[var(--clr-dark)] w-1 h-1"></div>
+
+                            {Array.from({ length: technologies[techIndex]?.level ?? 0 }).map((_, index) => (
+                                <div key={index} className="w-3 h-4.5 bg-[orange_]"></div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
