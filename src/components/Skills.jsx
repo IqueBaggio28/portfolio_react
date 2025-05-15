@@ -23,14 +23,14 @@ const Skills = ({sectionHeader}) =>{
             name: 'JavaScript',
             icon: faJsSquare,
             color: 'yellow',
-            level: 10,
+            level: 8,
             description: 'JavaScript is a versatile, high-level programming language widely used to create dynamic and interactive web applications. It powers everything from form validation and real-time updates to full-scale frontend frameworks like React and backend development with Node.js, making it an essential tool for modern full-stack developers.'
         },
         {
             name: 'React',
             icon: faReact,
             color: '#61DBFB',
-            level: 7,
+            level: 9,
             description: 'React is a popular JavaScript library for building fast, interactive user interfaces. It uses a component-based architecture and virtual DOM to efficiently manage updates and build scalable frontend applications.'
         },
         {
@@ -50,14 +50,14 @@ const Skills = ({sectionHeader}) =>{
             name: 'CSS',
             icon: faCss,
             color: '#264de4',
-            level: 8,
+            level: 9,
             description: 'CSS is a styling language used to control the presentation and layout of web pages. It allows developers to design visually engaging websites with responsiveness and animations.'
         },
         {
             name: 'Tailwind CSS',
             icon: faCss3Alt,
             color: '#38bdf8',
-            level: 7,
+            level: 5,
             description: 'Tailwind CSS is a utility-first CSS framework that enables developers to style applications directly within HTML by applying pre-defined classes, leading to fast and responsive UI development.'
         },
         {
@@ -69,14 +69,14 @@ const Skills = ({sectionHeader}) =>{
         },
         {
             name: 'C++',
-            icon: faPhp,
+            svg: 'images/cpp-icon.svg',
             color: '#f34b7d',
-            level: 6,
+            level: 5,
             description: 'C++ is a high-performance programming language commonly used for system/software development and game programming, known for its object-oriented features and close-to-hardware efficiency.'
         },
         {
             name: 'C#',
-            icon: faPhp,
+            svg: 'images/csharp-icon.svg',
             color: '#9B4F96',
             level: 5,
             description: 'C# is a modern, object-oriented language developed by Microsoft. It is primarily used for building Windows applications, games with Unity, and enterprise software on the .NET framework.'
@@ -84,8 +84,8 @@ const Skills = ({sectionHeader}) =>{
         {
             name: 'Git',
             icon: faGithub,
-            color: '#f1502f',
-            level: 7,
+            color: '#fff',
+            level: 8,
             description: 'Git is a version control system that enables developers to track changes in their codebase, collaborate with others, and manage project history efficiently across distributed teams.'
         },
         {
@@ -98,21 +98,21 @@ const Skills = ({sectionHeader}) =>{
             name: 'Java',
             icon: faJava,
             color: '#007396',
-            level: 5,
+            level: 4,
             description: 'Java is a robust, object-oriented programming language used in enterprise applications, Android development, and large-scale systems due to its platform independence and stability.'
         },
         {
             name: 'AWS',
             icon: faAws,
             color: '#FF9900',
-            level: 6,
+            level: 4,
             description: 'Amazon Web Services (AWS) is a leading cloud platform that offers scalable computing, storage, and deployment tools. It is widely used for hosting, databases, serverless apps, and machine learning.'
         },
         {
             name: 'PHP',
             icon: faPhp,
             color: '#8892be',
-            level: 6,
+            level: 5,
             description: 'PHP is a widely-used server-side scripting language suited for web development. It powers many dynamic websites and is especially known for its role in content management systems like WordPress.'
         }
     ];
@@ -140,12 +140,18 @@ const Skills = ({sectionHeader}) =>{
 
             <div className="grid grid-rows-2 place-items-center gap-20  lg:grid-cols-2 lg:grid-rows-0 lg:justify-between flex-grow-0 ">
                 <div className="grid grid-cols-3 grid-rows-4 gap-4  md:grid-cols-4">
-                    {technologies.map(({name, icon, color, level}, index) => (
+                    {technologies.map(({name, icon, color, level, svg}, index) => (
                         name !== 'empty'
                         ?
                         (
+
                             <div onClick={() => setTechIndex(index)} key={index} className=" group grid place-items-center  rounded-full h-20 w-20 cursor-pointer ">
-                                <FontAwesomeIcon icon={icon}  color={color} size="3x" key={index} className="group-hover:scale-120 group-active:scale-90 transition-all duration-300 ease-in-out   " />
+                                {!svg ? (
+                                        <FontAwesomeIcon icon={icon} color={color} size="3x" key={index}
+                                                         className="group-hover:scale-120 group-active:scale-90 transition-all duration-300 ease-in-out   "/>)
+                                    :
+                                    (
+                                        <img key={index} src={svg} className="h-12 group-hover:scale-120 group-active:scale-90 transition-all duration-300 ease-in-out "/>)}
                             </div>
                         )
                         :
@@ -155,7 +161,7 @@ const Skills = ({sectionHeader}) =>{
 
                     ))}
                 </div>
-                <div className="relative h-full  mx-10 grid place-items-center md:w-[520px]">
+                <div className="relative h-full  mx-10 grid place-items-center transition-all duration-300 md:w-[520px]">
                     <div>
                         <p className="text-2xl text-center">{pDescription}</p>
                     </div>
