@@ -13,7 +13,7 @@ const Hero = () => {
             <h1 className="text-4xl font-black text-center text-[var(--clr-slate400)] text-wrap px-20">SOFTWARE ENGINEER</h1>
             <p className="text-center text-[var(--clr-slate600)] font-medium">A dedicated Software Engineering and passionate developer with hands-on experience in full-stack development.
                 <span className="text-orange-500 font-semibold">Proficient in JavaScript (React), Python, C++, and PHP</span>, with a strong foundation in
-                <span className="text-teal-400">object-oriented programming, data structures, algorithms, and SQL</span>.
+                <span className="text-teal-400"> object-oriented programming, data structures, algorithms, and SQL</span>.
                 I’ve contributed to real-world applications through internships, research, and teaching, and I’m always looking to build solutions that make an impact.</p>
 
 
@@ -27,7 +27,7 @@ const Hero = () => {
                 <a href="#skills" className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
                     Skills
                 </a>
-                <a className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
+                <a href='#projects' className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer">
                     Projects
                 </a>
             </div>
