@@ -116,10 +116,10 @@ const Experience = ({ sectionHeader }) => {
             <div
               onClick={() => setExpandedIndex(index)}
               key={index}
-              className={`w-full pt-6 pb-3 px-6  relative border border-[var(--clr-teal)] rounded-lg  flex flex-col justify-between items-center bg-[var(--clr-darker)] transition-all duration-400 ease-in-out md:min-w-[550px]  ${
+              className={`w-full pt-6 pb-3 px-6  relative border border-[var(--clr-teal)] rounded-lg  flex flex-col justify-between items-center bg-[var(--clr-darker)] transition-all duration-400 ease-in-out md:min-w-[550px] lg:min-w-[250px] lg:min-h-[500px] lg:justify-center lg:gap-10  ${
                 expandedIndex === index
                   ? "min-h-[700px]"
-                  : "min-h-60 cursor-pointer hover:scale-[1.1] hover:md:scale-[1.2] "
+                  : "min-h-60 cursor-pointer hover:scale-[1.1] hover:md:scale-[1.2] lg:hover:scale-[1.1] "
               } `}
             >
               {expandedIndex === index ? (
@@ -246,7 +246,8 @@ const Experience = ({ sectionHeader }) => {
                     <div
                       className=" relative h-24 w-24 rounded-full bg-gray-600 opacity-0 group-hover:opacity-100
                                         scale-90 group-hover:scale-100 translate-y-2 pointer-events-none place-items-center
-                                        transition-all duration-300 ease-in-out grid group-hover:translate-y-12 group-hover:pointer-events-auto hover:place-items-center "
+                                        transition-all duration-300 ease-in-out grid group-hover:translate-y-12 group-hover:pointer-events-auto hover:place-items-center
+                                        lg:group-hover:translate-y-45 lg:hover:place-items-center "
                     >
                       <FontAwesomeIcon
                         icon={faArrowUp}

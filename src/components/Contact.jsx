@@ -152,7 +152,7 @@ const Contact = ({ sectionHeader }) => {
       </div>
       <a
         href="#"
-        className="absolute bottom-10 right-10 w-20 h-20 grid place-items-center rounded-full border-2 border-[var(--clr-slate400)]"
+        className="absolute bottom-10 right-10 w-20 h-20 grid place-items-center rounded-full border-2 border-[var(--clr-slate400)] hover:bg-[var(--clr-slate400)] hover:text-[var(--clr-light)] transition-all duration-300"
       >
         <FontAwesomeIcon
           icon={faArrowUp}

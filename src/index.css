@@ -96,7 +96,7 @@
   }
 
   .fancy-letter {
-    @apply text-white text-5xl font-['Rubik'] uppercase m-0;
+    @apply text-white text-3xl uppercase m-0 sm:text-4xl md:text-5xl;
   }
 }
 
