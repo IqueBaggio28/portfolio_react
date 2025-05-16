@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Contact = ({ sectionHeader }) => {
   const contact = {
-    name: "HENRIQUE BAGGIO",
-    position: "SFTW ENG.",
-    location: "FORT-MYERS - USA",
-    number: "+1 ( 239 ) 391 - 9693",
+    name: ["HENRIQUE", "BAGGIO"],
+    position: ["SOFTWARE", "ENGR."],
+    location: ["FORT-MYERS", "-", "USA"],
+    phoneNumber: ["+1", "(", "239", ")", "391", "-", "9693"],
     mail: { label: "->EMAIL", link: "mailto:iquebaggio@gmail.com" },
     linkedin: {
       label: "->LINKEDIN",
@@ -13,13 +13,137 @@ const Contact = ({ sectionHeader }) => {
     },
   };
 
+  const getRandomTransform = () => {
+    const translateX = Math.floor(Math.random() * 110 - 65); // -65 to +45
+    const translateY = Math.floor(Math.random() * 70 - 45); // -45 to +25
+    const rotate = Math.floor(Math.random() * 42 - 22); // -22 to +20
+    return `translate(${translateX}%, ${translateY}%) rotate(${rotate}deg)`;
+  };
+
+  const enhance = (element) => {
+    if (!element) return;
+    const text = element.innerText.split("");
+    element.innerText = "";
+
+    text.forEach((value, index) => {
+      const outer = document.createElement("span");
+      outer.className = "fancy-outer";
+
+      // Set random transform as a data attribute
+      outer.dataset.hoverTransform = getRandomTransform();
+
+      const inner = document.createElement("span");
+      inner.className = "fancy-inner";
+      inner.style.animationDelay = `${Math.floor(Math.random() * -5000)}ms`;
+
+      const letter = document.createElement("span");
+      letter.className = "fancy-letter";
+      letter.innerText = value;
+      letter.style.animationDelay = `${index * 1000}ms`;
+
+      inner.appendChild(letter);
+      outer.appendChild(inner);
+      element.appendChild(outer);
+    });
+
+    // Add hover event listeners
+    const isLastLine = element.closest(".fancy-line:last-child") !== null;
+    const line = element.closest(".fancy-line");
+
+    if (isLastLine) {
+      // For the last line, apply transforms on word hover
+      element.addEventListener("mouseenter", () => {
+        element.querySelectorAll(".fancy-outer").forEach((outer) => {
+          outer.style.transform = outer.dataset.hoverTransform;
+        });
+      });
+
+      element.addEventListener("mouseleave", () => {
+        element.querySelectorAll(".fancy-outer").forEach((outer) => {
+          outer.style.transform = "none";
+        });
+      });
+    } else {
+      // For other lines, apply transforms on line hover
+      if (line && !line.dataset.hasListener) {
+        line.dataset.hasListener = "true";
+        line.addEventListener("mouseenter", () => {
+          line.querySelectorAll(".fancy-outer").forEach((outer) => {
+            outer.style.transform = outer.dataset.hoverTransform;
+          });
+        });
+
+        line.addEventListener("mouseleave", () => {
+          line.querySelectorAll(".fancy-outer").forEach((outer) => {
+            outer.style.transform = "none";
+          });
+        });
+      }
+    }
+  };
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".fancy");
+    elements.forEach(enhance);
+  }, []);
+
   return (
     <section id="contact" className="container_sec">
-      <h2 className="sectionHeader">{sectionHeader}</h2>
-      <div className="flex flex-col gap-4">
-        <p>{contact.name}</p>
-        <p>{contact.position}</p>
-        <p>{contact.location}</p>
+      <div className="w-full flex flex-col items-center gap-20">
+        <h2 className="sectionHeader">{sectionHeader}</h2>
+
+        <div className="fancy-text-container cursor-pointer">
+          <div className="fancy-line">
+            {contact.name.map((name, index) => (
+              <p className="fancy" key={index}>
+                {name}
+                &nbsp;
+              </p>
+            ))}
+          </div>
+          <div className="fancy-line">
+            {contact.position.map((position, index) => (
+              <p className="fancy" key={index}>
+                {position}
+                &nbsp;
+              </p>
+            ))}
+          </div>
+          <div className="fancy-line">
+            {contact.location.map((location, index) => (
+              <p className="fancy" key={index}>
+                {location}
+                &nbsp;
+              </p>
+            ))}
+          </div>
+          <div className="fancy-line">
+            {contact.phoneNumber.map((phoneNumber, index) => (
+              <p className="fancy" key={index}>
+                {phoneNumber}
+                &nbsp;
+              </p>
+            ))}
+          </div>
+          <div className="fancy-line">
+            <a
+              className="fancy"
+              href={contact.mail.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {contact.mail.label}
+            </a>
+            <a
+              className="fancy"
+              href={contact.linkedin.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {contact.linkedin.label}
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

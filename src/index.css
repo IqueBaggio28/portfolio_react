@@ -24,6 +24,16 @@
 /*  --color-orange_: #ea580c ;*/
 /*}*/
 
+@keyframes float {
+  from,
+  to {
+    transform: translateY(-0%);
+  }
+  50% {
+    transform: translateY(-5%);
+  }
+}
+
 @layer components {
   .btn {
     display: inline-block;
@@ -57,6 +67,64 @@
   .container_sec {
     @apply flex flex-col gap-4 items-center justify-center min-h-screen px-10;
   }
+  .line {
+    @apply flex justify-between items-center;
+  }
+
+  .fancy-text-container {
+    @apply flex flex-col items-center justify-center m-0 rounded-[50px];
+  }
+
+  .fancy-line {
+    @apply flex justify-between transition-opacity duration-300 ease-in-out;
+  }
+
+  .fancy-text-container:hover .fancy-line:not(:hover) {
+    @apply opacity-20;
+  }
+
+  .fancy-outer {
+    @apply inline-block transition-transform duration-[350ms] ease-in-out;
+  }
+
+  .fancy-line:hover .fancy-outer {
+    @apply duration-[800ms];
+  }
+
+  .fancy-line:hover .fancy .fancy-inner {
+    animation: float 5s ease infinite;
+  }
+
+  .fancy-letter {
+    @apply text-white text-4xl font-['Rubik'] uppercase m-0;
+  }
+}
+
+/* General line hover animation */
+.fancy-line:hover .fancy .fancy-outer {
+  @apply duration-[800ms];
+}
+
+.fancy-line:hover .fancy .fancy-inner {
+  animation: float 5s ease infinite;
+}
+
+/* Special case for links - only animate on word hover */
+.fancy-line:last-child .fancy:hover .fancy-outer {
+  @apply duration-[800ms];
+}
+
+.fancy-line:last-child .fancy:hover .fancy-inner {
+  animation: float 5s ease infinite;
+}
+
+/* Reset line hover animation for the last line */
+.fancy-line:last-child:hover .fancy .fancy-outer {
+  @apply duration-[350ms];
+}
+
+.fancy-line:last-child:hover .fancy .fancy-inner {
+  animation: none;
 }
 
 *,

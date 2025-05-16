@@ -68,7 +68,7 @@ const Projects = ({ sectionHeader }) => {
           className="flex flex-col items-center justify-between gap-4"
           key={index}
         >
-          <div className="w-3/4 flex justify-center relative items-center text-[cyan_] mb-4">
+          <div className="flex justify-center relative items-center text-[cyan_] mb-4">
             <a href={link} target="_blank" rel="noopener noreferrer">
               <h3 className="text-3xl text-center">{name}</h3>
               <FontAwesomeIcon
