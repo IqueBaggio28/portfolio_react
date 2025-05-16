@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = ({ sectionHeader }) => {
   const contact = {
     name: ["HENRIQUE", "BAGGIO"],
-    position: ["SOFTWARE", "ENGR."],
+    position: ["SOFTWARE", "-", "ENGR."],
     location: ["FORT-MYERS", "-", "USA"],
     phoneNumber: ["+1", "(", "239", ")", "391", "-", "9693"],
     mail: { label: "->EMAIL", link: "mailto:iquebaggio@gmail.com" },
@@ -14,7 +16,7 @@ const Contact = ({ sectionHeader }) => {
   };
 
   const getRandomTransform = () => {
-    const translateX = Math.floor(Math.random() * 110 - 65); // -65 to +45
+    const translateX = Math.floor(Math.random() * 40 - 20); // -65 to +45
     const translateY = Math.floor(Math.random() * 70 - 45); // -45 to +25
     const rotate = Math.floor(Math.random() * 42 - 22); // -22 to +20
     return `translate(${translateX}%, ${translateY}%) rotate(${rotate}deg)`;
@@ -88,7 +90,7 @@ const Contact = ({ sectionHeader }) => {
   }, []);
 
   return (
-    <section id="contact" className="container_sec">
+    <section id="contact" className="container_sec relative">
       <div className="w-full flex flex-col items-center gap-20">
         <h2 className="sectionHeader">{sectionHeader}</h2>
 
@@ -145,6 +147,16 @@ const Contact = ({ sectionHeader }) => {
           </div>
         </div>
       </div>
+      <a
+        href="#"
+        className="absolute bottom-10 right-10 w-20 h-20 grid place-items-center rounded-full border-2 border-[var(--clr-slate400)]"
+      >
+        <FontAwesomeIcon
+          icon={faArrowUp}
+          size="2xl"
+          color="var(--clr-orange)"
+        />
+      </a>
     </section>
   );
 };
