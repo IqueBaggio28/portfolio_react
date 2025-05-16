@@ -65,7 +65,7 @@
   }
 
   .container_sec {
-    @apply flex flex-col gap-4 items-center justify-center min-h-screen px-10;
+    @apply flex flex-col gap-4 items-center justify-center min-h-screen px-10 md:px-40;
   }
   .line {
     @apply flex justify-between items-center;
@@ -140,11 +140,14 @@
 body {
   max-width: 100%;
   overflow-x: hidden;
+  min-height: 100%;
+  position: relative;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding: 3em;
+  scroll-padding-top: 3rem;
+  height: 100%;
 }
 
 body {
@@ -174,10 +177,10 @@ button {
 strong {
   color: var(--clr-orange);
 }
-
+/* 
 a {
   color: var(--clr-teal);
-}
+} */
 
 /* SCROLLBAR */
 
