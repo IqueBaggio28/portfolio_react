@@ -9,7 +9,7 @@ const Header = ({ setNavBarOpen }) => {
   return (
     <div className="fixed top-0 left-0 z-30">
       <div className="hidden h-10 lg:bg-gray-400 lg:block ">hello</div>
-      <div className="h-20 w-full flex items-center pl-7 lg:hidden">
+      <div className="h-20 w-full flex items-center pl-7  lg:hidden">
         <Button
           onClick={() => setNavBarOpen((prev) => !prev)}
           className="bg-[var(--clr-dark)]"

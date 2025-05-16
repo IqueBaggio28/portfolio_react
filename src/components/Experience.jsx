@@ -158,7 +158,7 @@ const Experience = ({ sectionHeader }) => {
                   <div>
                     <ul className="mx-3 flex flex-col gap-3">
                       {description.map((paragraph) => (
-                        <li key={paragraph} className="text-lg">
+                        <li key={paragraph} className="text-lg md:text-xl">
                           {paragraph}
                         </li>
                       ))}
@@ -232,7 +232,7 @@ const Experience = ({ sectionHeader }) => {
                     )}
                   </div>
                   <div className="">
-                    <p className="text-[var(--clr-teal)] text-sm tracking-[0.4rem] text-center font-bold ">
+                    <p className="text-[var(--clr-teal)] text-sm tracking-[0.4rem] text-center font-bold md:text-lg ">
                       {title}
                     </p>
                     <p className="text-xs text-center text-gray-400">{date}</p>

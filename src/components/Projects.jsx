@@ -70,7 +70,7 @@ const Projects = ({ sectionHeader }) => {
         >
           <div className="flex justify-center relative items-center text-[cyan_] mb-4">
             <a href={link} target="_blank" rel="noopener noreferrer">
-              <h3 className="text-3xl text-center">{name}</h3>
+              <h3 className="text-3xl text-center md:text-4xl">{name}</h3>
               <FontAwesomeIcon
                 className="absolute right-0 -top-3"
                 icon={faArrowUpRightFromSquare}
@@ -80,7 +80,10 @@ const Projects = ({ sectionHeader }) => {
           </div>
           <div className="flex flex-col gap-4 mb-4">
             {description.map((desc, index) => (
-              <p className="text-lg text-[var(--clr-slate400)]" key={index}>
+              <p
+                className="text-center text-[var(--clr-slate400)] md:text-lg"
+                key={index}
+              >
                 {desc}
               </p>
             ))}

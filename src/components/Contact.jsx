@@ -92,9 +92,9 @@ const Contact = ({ sectionHeader }) => {
   return (
     <section
       id="contact"
-      className="relative flex flex-col items-center justify-center min-h-screen w-full px-10 pb-32 mt-20"
+      className="relative flex flex-col items-center justify-center min-h-screen w-full"
     >
-      <div className="w-full flex flex-col items-center gap-20">
+      <div className="w-full flex flex-col items-center gap-20 ">
         <h2 className="sectionHeader">{sectionHeader}</h2>
 
         <div className="fancy-text-container cursor-pointer">

@@ -133,17 +133,17 @@ const Skills = ({ sectionHeader }) => {
     setPDescription(technologies[techIndex]?.description);
   }, [techIndex]);
 
-  // useEffect(() => {
-  //     const timeout = setTimeout(() => setTechIndex(null), 15000);
-  //     return () => clearTimeout(timeout);
-  // }, [techIndex]);
+  useEffect(() => {
+    const timeout = setTimeout(() => setTechIndex(null), 15000);
+    return () => clearTimeout(timeout);
+  }, [techIndex]);
 
   return (
     <section id="skills" className="container_sec">
       <h2 className="sectionHeader">{sectionHeader}</h2>
 
       <div className="grid grid-rows-2 place-items-center gap-20  lg:grid-cols-2 lg:grid-rows-0 lg:justify-between flex-grow-0 ">
-        <div className="grid grid-cols-3 grid-rows-4 gap-4  md:grid-cols-4">
+        <div className="grid grid-cols-3 grid-rows-4 gap-6  md:grid-cols-4">
           {technologies.map(({ name, icon, color, level, svg }, index) =>
             name !== "empty" ? (
               <div
@@ -155,7 +155,7 @@ const Skills = ({ sectionHeader }) => {
                   <FontAwesomeIcon
                     icon={icon}
                     color={color}
-                    size="3x"
+                    size="4x"
                     key={index}
                     className="group-hover:scale-120 group-active:scale-90 transition-all duration-300 ease-in-out   "
                   />
@@ -163,7 +163,7 @@ const Skills = ({ sectionHeader }) => {
                   <img
                     key={index}
                     src={svg}
-                    className="h-12 group-hover:scale-120 group-active:scale-90 transition-all duration-300 ease-in-out "
+                    className="h-16 group-hover:scale-120 group-active:scale-90 transition-all duration-300 ease-in-out "
                   />
                 )}
               </div>
