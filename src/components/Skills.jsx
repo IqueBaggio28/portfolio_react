@@ -126,10 +126,10 @@ const Skills = ({sectionHeader}) =>{
 
     },[techIndex])
 
-    useEffect(() => {
-        const timeout = setTimeout(() => setTechIndex(null), 15000);
-        return () => clearTimeout(timeout);
-    }, [techIndex]);
+    // useEffect(() => {
+    //     const timeout = setTimeout(() => setTechIndex(null), 15000);
+    //     return () => clearTimeout(timeout);
+    // }, [techIndex]);
 
 
 
@@ -161,12 +161,12 @@ const Skills = ({sectionHeader}) =>{
 
                     ))}
                 </div>
-                <div className="relative h-full  mx-10 grid place-items-center transition-all duration-300 md:w-[520px]">
+                <div className={`relative h-full mx-10 flex flex-col justify-center ${techIndex == null ? 'items-center' : 'items-end'} md:w-[520px]`}>
                     <div>
                         <p className="text-2xl text-center">{pDescription}</p>
                     </div>
 
-                    <div className={`absolute right-0 bottom-0 transition-opacity duration-300 ${techIndex === null ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+                    <div className={`transition-opacity duration-300 mt-4 ${techIndex === null ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                         <div className="flex items-center justify-between">
                             <p>Experience: </p>
                             <p>{technologies[techIndex]?.level} / 10</p>
