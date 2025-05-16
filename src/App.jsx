@@ -7,21 +7,21 @@ import About from "./components/About.jsx";
 import Experience from "./components/Experience.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "@/components/Projects.jsx";
+import Contact from "@/components/Contact.jsx";
 function App() {
-
   const [navBarOpen, setNavBarOpen] = useState(false);
-
 
   return (
     <>
-        <Navbar navBarOpen={navBarOpen} setNavBarOpen={setNavBarOpen} />
+      <Navbar navBarOpen={navBarOpen} setNavBarOpen={setNavBarOpen} />
 
-        <Header setNavBarOpen={setNavBarOpen} />
-        <Hero />
-        <About sectionHeader="About Me"/>
-        <Experience sectionHeader="Experience"/>
-        <Skills sectionHeader="Skills" />
-        <Projects sectionHeader="Projects"/>
+      <Header setNavBarOpen={setNavBarOpen} />
+      <Hero />
+      <About sectionHeader="About Me" />
+      <Experience sectionHeader="Experience" />
+      <Skills sectionHeader="Skills" />
+      <Projects sectionHeader="Projects" />
+      <Contact sectionHeader="Contact" />
     </>
   );
 }
