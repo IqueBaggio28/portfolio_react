@@ -5,12 +5,12 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 const Contact = ({ sectionHeader }) => {
   const contact = {
     name: ["HENRIQUE", "BAGGIO"],
-    position: ["SOFTWARE", "-", "ENGR."],
-    location: ["FORT-MYERS", "-", "USA"],
+    position: ["SOFTWARE", "ENGR."],
+    location: ["FORT", "MYERS", "-", "USA"],
     phoneNumber: ["+1", "(", "239", ")", "391", "-", "9693"],
-    mail: { label: "->EMAIL", link: "mailto:iquebaggio@gmail.com" },
+    mail: { label: "EMAIL", link: "mailto:iquebaggio@gmail.com" },
     linkedin: {
-      label: "->LINKEDIN",
+      label: "LINKEDIN",
       link: "https://www.linkedin.com/in/henrique-baggio/",
     },
   };
@@ -110,7 +110,7 @@ const Contact = ({ sectionHeader }) => {
             {contact.position.map((position, index) => (
               <p className="fancy" key={index}>
                 {position}
-                &nbsp;
+                &nbsp; &nbsp;
               </p>
             ))}
           </div>
@@ -130,9 +130,9 @@ const Contact = ({ sectionHeader }) => {
               </p>
             ))}
           </div>
-          <div className="fancy-line">
+          <div className="fancy-line flex gap-16 sm:gap-20 md:gap-26 ">
             <a
-              className="fancy"
+              className="fancy text-[var(--clr-orange)]"
               href={contact.mail.link}
               target="_blank"
               rel="noopener noreferrer"
@@ -140,7 +140,7 @@ const Contact = ({ sectionHeader }) => {
               {contact.mail.label}
             </a>
             <a
-              className="fancy"
+              className="fancy text-[var(--clr-teal)]"
               href={contact.linkedin.link}
               target="_blank"
               rel="noopener noreferrer"
