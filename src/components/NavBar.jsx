@@ -34,11 +34,12 @@ const NavBar = ({ navBarOpen, setNavBarOpen }) => {
         </Button>
       </div>
 
-      <div className="flex flex-col h-full items-center justify-center pb-3">
+      <div className="flex flex-col h-full items-center justify-center pb-3 ">
         <ul className="flex flex-col gap-4 items-center">
           <li>
             <a href="#about" onClick={() => setNavBarOpen(false)}>
               <FontAwesomeIcon
+                className="hover:scale-110 hover:text-[var(--clr-slate400)] transition-all duration-300 ease-in-out"
                 icon={faFile}
                 size="3x"
                 color={"var(--clr-light)"}
@@ -54,6 +55,8 @@ const NavBar = ({ navBarOpen, setNavBarOpen }) => {
             >
               <FontAwesomeIcon
                 icon={faLinkedin}
+                className="hover:scale-110 hover:text-[var(--clr-slate400)] transition-all duration-300 ease-in-out"
+
                 size="3x"
                 color={"var(--clr-light)"}
               />
@@ -68,6 +71,7 @@ const NavBar = ({ navBarOpen, setNavBarOpen }) => {
             >
               <FontAwesomeIcon
                 icon={faGithub}
+                className="hover:scale-110 hover:text-[var(--clr-slate400)] transition-all duration-300 ease-in-out"
                 size="3x"
                 color={"var(--clr-light)"}
               />

@@ -130,7 +130,7 @@ const Contact = ({ sectionHeader }) => {
               </p>
             ))}
           </div>
-          <div className="fancy-line flex gap-16 sm:gap-20 md:gap-26 ">
+          <div className="fancy-line flex gap-14 sm:gap-18 md:gap-22 ">
             <a
               className="fancy text-[var(--clr-orange)]"
               href={contact.mail.link}

@@ -184,7 +184,7 @@ const Skills = ({ sectionHeader }) => {
                 pDescription
               ) : (
                 <>
-                  <span className="text-[var(--clr-orange)]">
+                <span className="text-[var(--clr-orange)]">
                     {pDescription.split(" ")[0]}
                   </span>{" "}
                   {pDescription.split(" ").slice(1).join(" ")}
