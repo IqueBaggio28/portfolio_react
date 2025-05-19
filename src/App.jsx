@@ -8,12 +8,14 @@ import Experience from "./components/Experience.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "@/components/Projects.jsx";
 import Contact from "@/components/Contact.jsx";
+import ScrollProgressBar from "./components/ScrollProgressBar.jsx";
 
 function App() {
   const [navBarOpen, setNavBarOpen] = useState(false);
 
   return (
     <>
+      <ScrollProgressBar />
       <Navbar navBarOpen={navBarOpen} setNavBarOpen={setNavBarOpen} />
       <Header navBarOpen={navBarOpen} setNavBarOpen={setNavBarOpen} />
       <Hero />

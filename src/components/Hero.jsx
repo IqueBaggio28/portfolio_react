@@ -36,25 +36,25 @@ const Hero = () => {
       <div className="flex flex-wrap gap-4 justify-center lg:gap-8">
         <a
           href="#about"
-          className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer lg:text-lg"
+          className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer hover:bg-[var(--clr-slate800)] hover:text-[var(--clr-light)] transition-all duration-300 ease-in-out lg:text-lg"
         >
           About
         </a>
         <a
           href="#experience"
-          className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer"
+          className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer hover:bg-[var(--clr-slate800)] hover:text-[var(--clr-light)] transition-all duration-300 ease-in-out lg:text-lg"
         >
           Experience
         </a>
         <a
           href="#skills"
-          className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer"
+          className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer hover:bg-[var(--clr-slate800)] hover:text-[var(--clr-light)] transition-all duration-300 ease-in-out lg:text-lg"
         >
           Skills
         </a>
         <a
           href="#projects"
-          className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer"
+          className="border border-[var(--clr-teal)] px-4 py-3 rounded-2xl text-[var(--clr-teal)] cursor-pointer hover:bg-[var(--clr-slate800)] hover:text-[var(--clr-light)] transition-all duration-300 ease-in-out lg:text-lg"
         >
           Projects
         </a>
