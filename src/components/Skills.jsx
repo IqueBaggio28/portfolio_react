@@ -12,6 +12,7 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "@fontsource/press-start-2p"; // Import the pixel font
 
 const Skills = ({ sectionHeader }) => {
   const technologies = [
@@ -19,9 +20,9 @@ const Skills = ({ sectionHeader }) => {
       name: "JavaScript",
       icon: faJsSquare,
       color: "yellow",
-      level: 8,
+      level: 7,
       description:
-        "JavaScript is a versatile, high-level programming language widely used to create dynamic and interactive web applications. It powers everything from form validation and real-time updates to full-scale frontend frameworks like React and backend development with Node.js, making it an essential tool for modern full-stack developers.",
+        "JavaScript is a versatile programming language used to create dynamic and interactive web applications, powering both frontend and backend development through frameworks like React and Node.js.",
     },
     {
       name: "React",
@@ -113,7 +114,7 @@ const Skills = ({ sectionHeader }) => {
       color: "#FF9900",
       level: 4,
       description:
-        "Amazon Web Services (AWS) is a leading cloud platform that offers scalable computing, storage, and deployment tools. It is widely used for hosting, databases, serverless apps, and machine learning.",
+        "AWS (Amazon Web Services) is a leading cloud platform that offers scalable computing, storage, and deployment tools. It is widely used for hosting, databases, serverless apps, and machine learning.",
     },
     {
       name: "PHP",
@@ -142,7 +143,7 @@ const Skills = ({ sectionHeader }) => {
     <section id="skills" className="container_sec">
       <h2 className="sectionHeader">{sectionHeader}</h2>
 
-      <div className="grid grid-rows-2 place-items-center gap-20  lg:grid-cols-2 lg:grid-rows-0 lg:justify-between flex-grow-0 ">
+      <div className="grid grid-rows-2 place-items-center gap-10  lg:grid-cols-2 lg:grid-rows-0 lg:justify-between ">
         <div className="grid grid-cols-3 grid-rows-4 gap-6  md:grid-cols-4">
           {technologies.map(({ name, icon, color, level, svg }, index) =>
             name !== "empty" ? (
@@ -173,12 +174,23 @@ const Skills = ({ sectionHeader }) => {
           )}
         </div>
         <div
-          className={`relative h-full text-[var(--clr-slate400)] flex flex-col justify-center ${
+          className={`relative  h-full text-[var(--clr-slate400)] flex flex-col justify-center lg:pl-30 ${
             techIndex == null ? "items-center" : "items-end"
           } md:w-[520px]`}
         >
           <div>
-            <p className="text-2xl text-center">{pDescription}</p>
+            <p className="text-2xl text-center lg:text-end">
+              {pDescription === "Click for More!" ? (
+                pDescription
+              ) : (
+                <>
+                  <span className="text-[var(--clr-orange)]">
+                    {pDescription.split(" ")[0]}
+                  </span>{" "}
+                  {pDescription.split(" ").slice(1).join(" ")}
+                </>
+              )}
+            </p>
           </div>
 
           <div
@@ -188,9 +200,9 @@ const Skills = ({ sectionHeader }) => {
                 : "opacity-100"
             }`}
           >
-            <div className="flex items-center justify-between text-[var(--clr-slate600)]">
+            <div className="flex items-center justify-between text-[var(--clr-slate400)] font-['Press_Start_2P'] text-[10px] ">
               <p>Experience: </p>
-              <p>{technologies[techIndex]?.level} / 10</p>
+              <p>{technologies[techIndex]?.level}/10</p>
             </div>
             <div className="w-42 h-7 border-2 flex gap-1 justify-start items-center px-1 relative">
               <div className="absolute -left-1 -bottom-1 bg-[var(--clr-dark)] w-1 h-1"></div>
@@ -200,7 +212,21 @@ const Skills = ({ sectionHeader }) => {
 
               {Array.from({ length: technologies[techIndex]?.level ?? 0 }).map(
                 (_, index) => (
-                  <div key={index} className="w-3 h-4.5 bg-[orange_]"></div>
+                  <div
+                    key={index}
+                    className={`w-3 h-4.5 bg-[var(--clr-orange)] `}
+                    // ${
+                    //   index < 2
+                    //     ? "bg-blue-400"
+                    //     : index < 4
+                    //     ? "bg-green-400"
+                    //     : index < 6
+                    //     ? "bg-yellow-400"
+                    //     : index < 8
+                    //     ? "bg-orange-400"
+                    //     : "bg-red-400"
+                    // }
+                  ></div>
                 )
               )}
             </div>

@@ -65,7 +65,7 @@
   }
 
   .container_sec {
-    @apply flex flex-col gap-4 items-center justify-center min-h-screen px-10 md:px-40;
+    @apply flex flex-col gap-4 items-center justify-center min-h-screen mb-40 px-10 md:px-40;
   }
   .line {
     @apply flex justify-between items-center;

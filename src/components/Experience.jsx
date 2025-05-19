@@ -134,7 +134,7 @@ const Experience = ({ sectionHeader }) => {
                     <FontAwesomeIcon icon={faClose} size="lg" />
                   </button>
 
-                  <div className="flex items-center justify-between w-full">
+                  <div className="flex items-center justify-between w-full mb-8">
                     <Avatar
                       className="w-25 h-25 overflow-hidden border border-gray-700"
                       style={{
@@ -156,7 +156,7 @@ const Experience = ({ sectionHeader }) => {
                     </div>
                   </div>
                   <div>
-                    <ul className="mx-3 flex flex-col gap-3">
+                    <ul className="mx-3 flex flex-col gap-3 mb-8">
                       {description.map((paragraph) => (
                         <li key={paragraph} className="text-lg md:text-xl">
                           {paragraph}
