@@ -3,8 +3,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faFile } from "@fortawesome/free-solid-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faClose, faFile } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = ({ navBarOpen, setNavBarOpen }) => {
   useEffect(() => {
@@ -28,9 +27,15 @@ const NavBar = ({ navBarOpen, setNavBarOpen }) => {
       <div className="h-20 w-full flex items-center pl-7 absolute">
         <Button
           onClick={() => setNavBarOpen((prev) => !prev)}
-          className="bg-[var(--clr-slate800)] hover:bg-[var(--clr-slate700)]"
+          className="bg-[var(--clr-slate800)] hover:bg-[var(--clr-slate700)] relative"
         >
-          <FontAwesomeIcon icon={faBars} size="xl" />
+          <FontAwesomeIcon
+            icon={faClose}
+            size="xl"
+            className={`transform transition-all duration-300 ${
+              navBarOpen ? "rotate-0 opacity-100" : "-rotate-90 opacity-0"
+            }`}
+          />
         </Button>
       </div>
 
@@ -56,7 +61,6 @@ const NavBar = ({ navBarOpen, setNavBarOpen }) => {
               <FontAwesomeIcon
                 icon={faLinkedin}
                 className="hover:scale-110 hover:text-[var(--clr-slate400)] transition-all duration-300 ease-in-out"
-
                 size="3x"
                 color={"var(--clr-light)"}
               />

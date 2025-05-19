@@ -8,14 +8,14 @@ import Experience from "./components/Experience.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "@/components/Projects.jsx";
 import Contact from "@/components/Contact.jsx";
+
 function App() {
   const [navBarOpen, setNavBarOpen] = useState(false);
 
   return (
     <>
       <Navbar navBarOpen={navBarOpen} setNavBarOpen={setNavBarOpen} />
-
-      <Header setNavBarOpen={setNavBarOpen} />
+      <Header navBarOpen={navBarOpen} setNavBarOpen={setNavBarOpen} />
       <Hero />
       <About sectionHeader="About Me" />
       <Experience sectionHeader="Experience" />
