@@ -63,49 +63,55 @@ const Projects = ({ sectionHeader }) => {
   return (
     <section id="projects" className="container_sec gap-24 ">
       <h2 className="sectionHeader">{sectionHeader}</h2>
+      {/* projects */}
       {projects.map(({ name, description, images, stack, link }, index) => (
         <div
-          className="flex flex-col items-center justify-between gap-4"
+          className="flex flex-col items-center justify-between gap-4 lg:flex-row lg:justify-between"
           key={index}
         >
-          <div className="flex justify-center relative items-center text-[cyan_] mb-4">
-            <a href={link} target="_blank" rel="noopener noreferrer">
-              <h3 className="text-3xl text-center md:text-4xl">{name}</h3>
-              <FontAwesomeIcon
-                className="absolute right-0 -top-3"
-                icon={faArrowUpRightFromSquare}
-                size="lg"
-              />
-            </a>
-          </div>
-          <div className="flex flex-col gap-4 mb-4">
-            {description.map((desc, index) => (
-              <p
-                className="text-center text-[var(--clr-slate400)] md:text-lg"
-                key={index}
-              >
-                {desc}
-              </p>
-            ))}
-          </div>
-          <div className="flex items-center gap-4">
-            {stack.map(({ svg, color, icon }, index) =>
-              svg ? (
-                <img
-                  src={svg}
-                  alt={name}
-                  className={`w-12 h-12 hover:scale-120 transition-all duration-300 ease-in-out ${color}`}
-                  key={index}
-                />
-              ) : (
+          {/* Project name and link */}
+          <div>
+            <div className="flex justify-center relative items-center text-[cyan_] mb-4">
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                <h3 className="text-3xl text-center md:text-4xl">{name}</h3>
                 <FontAwesomeIcon
-                  className="hover:scale-120 transtion-all duration-300 ease-in-out"
-                  icon={icon}
-                  color={color}
-                  size="xl"
+                  className="absolute right-0 -top-3"
+                  icon={faArrowUpRightFromSquare}
+                  size="lg"
                 />
-              )
-            )}
+              </a>
+            </div>
+            {/* Project description */}
+            <div className="flex flex-col gap-4 mb-4 lg:w-[355px]">
+              {description.map((desc, index) => (
+                <p
+                  className="text-center text-[var(--clr-slate400)] md:text-lg"
+                  key={index}
+                >
+                  {desc}
+                </p>
+              ))}
+            </div>
+            {/* Project stack */}
+            <div className="flex items-center justify-center gap-4">
+              {stack.map(({ svg, color, icon }, index) =>
+                svg ? (
+                  <img
+                    src={svg}
+                    alt={name}
+                    className={`w-12 h-12 hover:scale-120 transition-all duration-300 ease-in-out ${color}`}
+                    key={index}
+                  />
+                ) : (
+                  <FontAwesomeIcon
+                    className="hover:scale-120 transtion-all duration-300 ease-in-out"
+                    icon={icon}
+                    color={color}
+                    size="xl"
+                  />
+                )
+              )}
+            </div>
           </div>
         </div>
       ))}

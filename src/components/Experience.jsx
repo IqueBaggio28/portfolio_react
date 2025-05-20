@@ -110,22 +110,23 @@ const Experience = ({ sectionHeader }) => {
   return (
     <section id="experience" className="container_sec mt-10">
       <h2 className="sectionHeader">{sectionHeader}</h2>
-      <div className="flex flex-col gap-10 lg:flex-row transform-3d">
+      <div className="flex flex-col gap-10 xl:flex-row">
         {companies.map(
           ({ name, title, companyImg, description, date, stacks }, index) => (
             <div
               onClick={() => setExpandedIndex(index)}
               key={index}
-              className={`w-full pt-6 pb-3 px-6  relative border border-[var(--clr-teal)] rounded-lg  flex flex-col justify-between items-center bg-[var(--clr-darker)] transition-all duration-400 ease-in-out md:min-w-[550px] lg:min-w-[250px] lg:min-h-[500px] lg:justify-center lg:gap-10  ${
+              className={`w-full pt-6 pb-3 px-6  relative border border-[var(--clr-teal)] rounded-lg  flex flex-col justify-between items-center bg-[var(--clr-darker)] transition-all duration-400 ease-in-out md:min-w-[550px] lg:max-w-[550px]  ${
                 expandedIndex === index
-                  ? "min-h-[700px]"
-                  : "min-h-60 cursor-pointer hover:scale-[1.1] hover:md:scale-[1.2] lg:hover:scale-[1.1] "
+                  ? "min-h-fit"
+                  : "min-h-60 cursor-pointer hover:scale-[1.1] hover:md:scale-[1.2]  "
               } `}
             >
+              {/* Expanded */}
               {expandedIndex === index ? (
-                <>
+                <div className="relative">
                   <button
-                    className="absolute top-2 right-3 opacity-30 p-4"
+                    className="absolute top-2 right-0 opacity-30 p-4"
                     onClick={(e) => {
                       e.stopPropagation();
                       setExpandedIndex(null);
@@ -155,8 +156,10 @@ const Experience = ({ sectionHeader }) => {
                       </p>
                     </div>
                   </div>
+
+                  {/*Description expanded*/}
                   <div>
-                    <ul className="mx-3 flex flex-col gap-3 mb-8">
+                    <ul className="mx-3 flex flex-col gap-3 mb-8 ">
                       {description.map((paragraph) => (
                         <li key={paragraph} className="text-lg md:text-xl">
                           {paragraph}
@@ -165,6 +168,7 @@ const Experience = ({ sectionHeader }) => {
                     </ul>
                   </div>
 
+                  {/*Stacks and date expanded*/}
                   <div className="flex items-center justify-between w-full">
                     <div className="flex gap-2">
                       {stacks.map(({ icon, color, svg }, index) =>
@@ -188,9 +192,10 @@ const Experience = ({ sectionHeader }) => {
                     </div>
                     <p className="text-xs text-center text-gray-400">{date}</p>
                   </div>
-                </>
+                </div>
               ) : (
                 <>
+                  {/*Arrow up right normal*/}
                   <div className="absolute top-2 right-3 opacity-30">
                     <FontAwesomeIcon
                       icon={faArrowUpRightFromSquare}
@@ -198,7 +203,7 @@ const Experience = ({ sectionHeader }) => {
                     />
                   </div>
 
-                  {/*Box content*/}
+                  {/*Box content normal*/}
                   <Avatar
                     className="w-25 h-25 overflow-hidden border border-gray-700"
                     style={{
@@ -211,6 +216,7 @@ const Experience = ({ sectionHeader }) => {
                     />
                   </Avatar>
 
+                  {/* Stacks icons normal*/}
                   <div className="flex gap-2">
                     {stacks.map(({ icon, color, svg }, index) =>
                       svg ? (
@@ -231,6 +237,8 @@ const Experience = ({ sectionHeader }) => {
                       )
                     )}
                   </div>
+
+                  {/* Company name and date normal */}
                   <div className="">
                     <p className="text-[var(--clr-teal)] text-sm tracking-[0.4rem] text-center font-bold md:text-lg ">
                       {title}
@@ -247,7 +255,7 @@ const Experience = ({ sectionHeader }) => {
                       className=" relative h-24 w-24 rounded-full bg-gray-600 opacity-0 group-hover:opacity-100
                                         scale-90 group-hover:scale-100 translate-y-2 pointer-events-none place-items-center
                                         transition-all duration-300 ease-in-out grid group-hover:translate-y-12 group-hover:pointer-events-auto hover:place-items-center
-                                        lg:group-hover:translate-y-45 lg:hover:place-items-center "
+                                        "
                     >
                       <FontAwesomeIcon
                         icon={faArrowUp}
