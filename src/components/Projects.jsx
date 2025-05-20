@@ -12,9 +12,11 @@ const Projects = ({ sectionHeader }) => {
         'The game offered players the choice of selecting between Charmander, Bulbasaur, and Squirtle. During battles, we incorporated two main moves: "Tackle," dealing base damage, and an "Elementary" attack, which varied in effectiveness based on the opponent, adhering closely to the original game\'s logic.',
       ],
       images: [
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
+        "images/projects/Poke_Menu_WIP.png",
+        "images/projects/Poke_Select_1.png",
+        "images/projects/char_battle_1frame.png",
+        "images/projects/squir_battle_1frame.png",
+        "images/projects/bulba_battle_1frame.png",
       ],
       stack: [
         { svg: "images/cpp-icon.svg", color: "#f34b7d" },
@@ -30,9 +32,11 @@ const Projects = ({ sectionHeader }) => {
         'The game offered players the choice of selecting between Charmander, Bulbasaur, and Squirtle. During battles, we incorporated two main moves: "Tackle," dealing base damage, and an "Elementary" attack, which varied in effectiveness based on the opponent, adhering closely to the original game\'s logic.',
       ],
       images: [
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
+        "images/projects/Poke_Menu_WIP.png",
+        "images/projects/Poke_Select_1.png",
+        "images/projects/char_battle_1frame.png",
+        "images/projects/squir_battle_1frame.png",
+        "images/projects/bulba_battle_1frame.png",
       ],
       stack: [
         { svg: "images/cpp-icon.svg", color: "#f34b7d" },
@@ -48,9 +52,11 @@ const Projects = ({ sectionHeader }) => {
         'The game offered players the choice of selecting between Charmander, Bulbasaur, and Squirtle. During battles, we incorporated two main moves: "Tackle," dealing base damage, and an "Elementary" attack, which varied in effectiveness based on the opponent, adhering closely to the original game\'s logic.',
       ],
       images: [
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
+        "images/projects/Poke_Menu_WIP.png",
+        "images/projects/Poke_Select_1.png",
+        "images/projects/char_battle_1frame.png",
+        "images/projects/squir_battle_1frame.png",
+        "images/projects/bulba_battle_1frame.png",
       ],
       stack: [
         { svg: "images/cpp-icon.svg", color: "#f34b7d" },
@@ -61,19 +67,40 @@ const Projects = ({ sectionHeader }) => {
   ];
 
   return (
-    <section id="projects" className="container_sec gap-24 ">
+    <section id="projects" className="container_sec gap-24 lg:gap-50">
       <h2 className="sectionHeader">{sectionHeader}</h2>
       {/* projects */}
       {projects.map(({ name, description, images, stack, link }, index) => (
         <div
-          className="flex flex-col items-center justify-between gap-4 lg:flex-row lg:justify-between"
+          className={`flex flex-col w-full items-center justify-between gap-16 lg:flex-row lg:justify-evenly lg:items-start ${
+            index % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row"
+          }`}
           key={index}
         >
-          {/* Project name and link */}
-          <div>
+          {/* Project image */}
+          <div className="hidden gap-4 flex-col h-fit w-[400px] lg:flex">
+            {images.map((image, index) => (
+              <img
+                src={image}
+                alt={name}
+                className="w-full h-full object-cover cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+                key={index}
+              />
+            ))}
+          </div>
+
+          {/* Project details */}
+          <div className="sticky top-1/4">
+            {/* Project name and link */}
             <div className="flex justify-center relative items-center text-[cyan_] mb-4">
-              <a href={link} target="_blank" rel="noopener noreferrer">
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[var(--clr-orange)] transition-all duration-300 ease-in-out relative group"
+              >
                 <h3 className="text-3xl text-center md:text-4xl">{name}</h3>
+                <span className="absolute -bottom-1 left-1/2 w-0 h-[2px] bg-[var(--clr-orange)] group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
                 <FontAwesomeIcon
                   className="absolute right-0 -top-3"
                   icon={faArrowUpRightFromSquare}

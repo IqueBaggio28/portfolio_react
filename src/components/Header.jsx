@@ -10,18 +10,30 @@ const Header = ({ setNavBarOpen, navBarOpen }) => {
     <div className="fixed top-0 left-0 z-30 bg-transparent backdrop-blur-sm">
       <div className="hidden  justify-between items-center w-screen h-20 px-10 xl:h-28 lg:flex xl:px-20">
         <div className="flex justify-between items-center gap-8 h-full xl:gap-12">
-          <FontAwesomeIcon
-            icon={faLinkedin}
-            className="hover:scale-110 hover:text-[var(--clr-slate400)] transition-all duration-300 ease-in-out xl:scale-130 "
-            size="2x"
-            color={"var(--clr-slate600)"}
-          />
-          <FontAwesomeIcon
-            icon={faGithub}
-            className="hover:scale-110 hover:text-[var(--clr-slate400)] transition-all duration-300 ease-in-out xl:scale-130 "
-            size="2x"
-            color={"var(--clr-slate600)"}
-          />
+          <a
+            href="https://www.linkedin.com/in/henrique-baggio/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              className="hover:scale-110 hover:text-[var(--clr-slate400)] transition-all duration-300 ease-in-out xl:scale-130 "
+              size="2x"
+              color={"var(--clr-slate600)"}
+            />
+          </a>
+          <a
+            href="https://github.com/IqueBaggio28"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={faGithub}
+              className="hover:scale-110 hover:text-[var(--clr-slate400)] transition-all duration-300 ease-in-out xl:scale-130 "
+              size="2x"
+              color={"var(--clr-slate600)"}
+            />
+          </a>
         </div>
         <div className="flex justify-between items-center gap-8 h-full xl:gap-12">
           <FontAwesomeIcon
