@@ -68,8 +68,7 @@ const Projects = ({ sectionHeader }) => {
 
   return (
     <section id="projects" className="container_sec gap-24 lg:gap-50">
-      <h2 className="sectionHeader">{sectionHeader}</h2>
-      {/* projects */}
+      <h2 className="sectionHeader mb-10">{sectionHeader}</h2>
       {projects.map(({ name, description, images, stack, link }, index) => (
         <div
           className={`flex flex-col w-full items-center justify-between gap-16 lg:flex-row lg:justify-evenly lg:items-start ${

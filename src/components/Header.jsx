@@ -7,8 +7,8 @@ import MenuIcon from "./MenuIcon";
 
 const Header = ({ setNavBarOpen, navBarOpen }) => {
   return (
-    <div className="fixed top-0 left-0 z-30 bg-transparent backdrop-blur-sm">
-      <div className="hidden  justify-between items-center w-screen h-20 px-10 xl:h-28 lg:flex xl:px-20">
+    <div className="fixed top-0 left-0 z-30 ">
+      <div className="hidden  justify-between items-center w-screen h-20 px-10 bg-transparent backdrop-blur-sm xl:h-28 lg:flex xl:px-20">
         <div className="flex justify-between items-center gap-8 h-full xl:gap-12">
           <a
             href="https://www.linkedin.com/in/henrique-baggio/"

@@ -40,8 +40,12 @@ const About = ({ sectionHeader }) => {
             </div>
           ))}
         </div>
-        <div className="hidden xl:block">
-          <img src="https://via.placeholder.com/150" alt="about" />
+        <div className="hidden xl:block ">
+          <img
+            src="images/DSC01624.jpg"
+            alt="about"
+            className="w-full h-full object-cover rounded-lg"
+          />
         </div>
       </div>
     </section>

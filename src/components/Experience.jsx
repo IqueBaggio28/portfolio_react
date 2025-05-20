@@ -108,25 +108,30 @@ const Experience = ({ sectionHeader }) => {
   ];
 
   return (
-    <section id="experience" className="container_sec mt-10">
+    <section id="experience" className="container_sec">
       <h2 className="sectionHeader">{sectionHeader}</h2>
-      <div className="flex flex-col gap-10 xl:flex-row">
+      <div className="flex flex-col gap-10 xl:flex-row xl:gap-2">
         {companies.map(
           ({ name, title, companyImg, description, date, stacks }, index) => (
             <div
               onClick={() => setExpandedIndex(index)}
               key={index}
-              className={`w-full pt-6 pb-3 px-6  relative border border-[var(--clr-teal)] rounded-lg  flex flex-col justify-between items-center bg-[var(--clr-darker)] transition-all duration-400 ease-in-out md:min-w-[550px] lg:max-w-[550px]  ${
-                expandedIndex === index
-                  ? "min-h-fit"
-                  : "min-h-60 cursor-pointer hover:scale-[1.1] hover:md:scale-[1.2]  "
-              } `}
+              className={`w-full pt-6 pb-3 px-6  relative border-2 border-[var(--clr-teal)]
+                 rounded-lg  flex flex-col justify-between items-center bg-[var(--clr-darker)]
+                  transition-all duration-400 ease-in-out md:min-w-[550px] xl:min-w-[230px] xl:min-h-120     ${
+                    expandedIndex === index
+                      ? "min-h-fit md:max-w-[400px] lg:max-w-[400px] xl:min-w-full"
+                      : // Hide the card when it's not expanded
+                      expandedIndex !== null && expandedIndex !== index
+                      ? "xl:hidden"
+                      : "min-h-60 cursor-pointer hover:scale-[1.1] hover:md:scale-[1.2] hover:xl:scale-[1.05] "
+                  } `}
             >
               {/* Expanded */}
               {expandedIndex === index ? (
                 <div className="relative">
                   <button
-                    className="absolute top-2 right-0 opacity-30 p-4"
+                    className="absolute top-2 right-0 opacity-30 p-4 xl:-right-5"
                     onClick={(e) => {
                       e.stopPropagation();
                       setExpandedIndex(null);
@@ -194,7 +199,7 @@ const Experience = ({ sectionHeader }) => {
                   </div>
                 </div>
               ) : (
-                <>
+                <div className="flex flex-col gap-4 h-full justify-between items-center xl:justify-evenly">
                   {/*Arrow up right normal*/}
                   <div className="absolute top-2 right-3 opacity-30">
                     <FontAwesomeIcon
@@ -205,7 +210,7 @@ const Experience = ({ sectionHeader }) => {
 
                   {/*Box content normal*/}
                   <Avatar
-                    className="w-25 h-25 overflow-hidden border border-gray-700"
+                    className="w-25 h-25 overflow-hidden border border-gray-700 xl:w-28 xl:h-28"
                     style={{
                       padding: name === "Ottimizza Ltda." ? "10px" : "4px",
                     }}
@@ -217,7 +222,7 @@ const Experience = ({ sectionHeader }) => {
                   </Avatar>
 
                   {/* Stacks icons normal*/}
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 xl:gap-4">
                     {stacks.map(({ icon, color, svg }, index) =>
                       svg ? (
                         <img
@@ -264,7 +269,7 @@ const Experience = ({ sectionHeader }) => {
                       />
                     </div>
                   </button>
-                </>
+                </div>
               )}
             </div>
           )
