@@ -116,17 +116,29 @@ const Experience = ({ sectionHeader }) => {
             <div
               onClick={() => setExpandedIndex(index)}
               key={index}
-              className={`w-full pt-6 pb-3 px-6  relative border-2 border-[var(--clr-teal)]
-                 rounded-lg  flex flex-col justify-between items-center bg-[var(--clr-darker)]
-                  transition-all duration-400 ease-in-out md:min-w-[550px] xl:min-w-[230px] xl:min-h-120     ${
+              className={`pt-6 pb-3 px-6 relative border-2 border-[var(--clr-teal)]
+                 rounded-lg flex flex-col justify-between items-center bg-[var(--clr-darker)]
+                  transition-all duration-900 ease-in-out  md:min-w-[550px]  
+
+                  ${
                     expandedIndex === index
-                      ? "min-h-fit md:max-w-[400px] lg:max-w-[400px] xl:min-w-full"
+                      ? "min-h-[600px] max-h-[700px] transition-[height] duration-900 ease-in-out md:max-w-[400px] lg:max-w-[400px] xl:pt-6 xl:pb-3 xl:min-h-fit xl:max-h-[700px] xl:border-2 xl:md:max-w-[400px] xl:lg:max-w-[600px] xl:w-full xl:h-full xl:px-10"
                       : // Hide the card when it's not expanded
-                      expandedIndex !== null && expandedIndex !== index
-                      ? "xl:hidden"
-                      : "min-h-60 cursor-pointer hover:scale-[1.1] hover:md:scale-[1.2] hover:xl:scale-[1.05] "
+                      expandedIndex !== null &&
+                        expandedIndex !== index &&
+                        window.innerWidth >= 1280
+                      ? "xl:max-w-[100px] xl:min-w-[100px] xl:opacity-50 xl:hover:opacity-100 xl:overflow-hidden xl:p-2 xl:cursor-pointer xl:transition-opacity xl:duration-900 xl:ease-in-out"
+                      : "min-h-60 cursor-pointer hover:md:scale-[1.2] hover:xl:scale-[1.05] hover:xl:shadow-[0_0_15px_rgba(20,184,166,0.3)] transition-all duration-900 ease-in-out xl:min-w-[230px] xl:min-h-120 "
                   } `}
             >
+              {/* Backdrop */}
+              <div
+                className={`absolute top-0 right-0 w-full h-full rounded-lg transition-all duration-900 ease-in-out ${
+                  expandedIndex !== null && expandedIndex !== index
+                    ? "xl:backdrop-blur-sm xl:z-10"
+                    : ""
+                }`}
+              />
               {/* Expanded */}
               {expandedIndex === index ? (
                 <div className="relative">
