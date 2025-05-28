@@ -1,70 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import { faGamepad } from "@fortawesome/free-solid-svg-icons";
+import { ProjectsData } from "./DataFile.jsx";
+
 const Projects = ({ sectionHeader }) => {
-  const projects = [
-    {
-      name: "Pokemon Cerulean++",
-      description: [
-        "As part of our group project for Programming I, we were tasked with creating a GUI project using the C++ library SFML.",
-        "Our aim was to closely replicate the Pokemon battling system using a point-and-click SFML GUI system, effectively reverse-engineering its mechanics.",
-        'The game offered players the choice of selecting between Charmander, Bulbasaur, and Squirtle. During battles, we incorporated two main moves: "Tackle," dealing base damage, and an "Elementary" attack, which varied in effectiveness based on the opponent, adhering closely to the original game\'s logic.',
-      ],
-      images: [
-        "images/projects/Poke_Menu_WIP.png",
-        "images/projects/Poke_Select_1.png",
-        "images/projects/char_battle_1frame.png",
-        "images/projects/squir_battle_1frame.png",
-        "images/projects/bulba_battle_1frame.png",
-      ],
-      stack: [
-        { svg: "images/cpp-icon.svg", color: "#f34b7d" },
-        { svg: "images/sfml-icon.png", color: "#8CC84B" },
-      ],
-      link: "https://github.com/IqueBaggio28/Pokemon",
-    },
-    {
-      name: "Pokemon Cerulean++",
-      description: [
-        "As part of our group project for Programming I, we were tasked with creating a GUI project using the C++ library SFML.",
-        "Our aim was to closely replicate the Pokemon battling system using a point-and-click SFML GUI system, effectively reverse-engineering its mechanics.",
-        'The game offered players the choice of selecting between Charmander, Bulbasaur, and Squirtle. During battles, we incorporated two main moves: "Tackle," dealing base damage, and an "Elementary" attack, which varied in effectiveness based on the opponent, adhering closely to the original game\'s logic.',
-      ],
-      images: [
-        "images/projects/Poke_Menu_WIP.png",
-        "images/projects/Poke_Select_1.png",
-        "images/projects/char_battle_1frame.png",
-        "images/projects/squir_battle_1frame.png",
-        "images/projects/bulba_battle_1frame.png",
-      ],
-      stack: [
-        { svg: "images/cpp-icon.svg", color: "#f34b7d" },
-        { svg: "images/sfml-icon.png", color: "#8CC84B" },
-      ],
-      link: "https://github.com/IqueBaggio28/Pokemon",
-    },
-    {
-      name: "Pokemon Cerulean++",
-      description: [
-        "As part of our group project for Programming I, we were tasked with creating a GUI project using the C++ library SFML.",
-        "Our aim was to closely replicate the Pokemon battling system using a point-and-click SFML GUI system, effectively reverse-engineering its mechanics.",
-        'The game offered players the choice of selecting between Charmander, Bulbasaur, and Squirtle. During battles, we incorporated two main moves: "Tackle," dealing base damage, and an "Elementary" attack, which varied in effectiveness based on the opponent, adhering closely to the original game\'s logic.',
-      ],
-      images: [
-        "images/projects/Poke_Menu_WIP.png",
-        "images/projects/Poke_Select_1.png",
-        "images/projects/char_battle_1frame.png",
-        "images/projects/squir_battle_1frame.png",
-        "images/projects/bulba_battle_1frame.png",
-      ],
-      stack: [
-        { svg: "images/cpp-icon.svg", color: "#f34b7d" },
-        { svg: "images/sfml-icon.png", color: "#8CC84B" },
-      ],
-      link: "https://github.com/IqueBaggio28/Pokemon",
-    },
-  ];
+  const projects = ProjectsData;
 
   return (
     <section id="projects" className="container_sec gap-24 lg:gap-50">
