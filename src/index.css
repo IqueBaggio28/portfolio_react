@@ -24,6 +24,10 @@
 /*  --color-orange_: #ea580c ;*/
 /*}*/
 
+@theme {
+  --container-3xl: 100rem;
+}
+
 @keyframes float {
   from,
   to {

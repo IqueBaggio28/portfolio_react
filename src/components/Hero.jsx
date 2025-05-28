@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar.jsx";
 
 const Hero = () => {
   return (
-    <section className="container_sec lg:px-60 xl:px-80">
+    <section className="container_sec lg:px-60 xl:px-80 ">
       <Avatar className="w-30 h-30 overflow-hidden lg:w-40 lg:h-40">
         <AvatarImage
           src="images/hero_img.jpg"
@@ -11,7 +11,7 @@ const Hero = () => {
         />
       </Avatar>
 
-      <h3 className="text-[var(--clr-slate600)] text-lg font-bold lg:text-xl 2xl:text-2xl ">
+      <h3 className="text-[var(--clr-slate600)] text-lg font-bold lg:text-xl 2xl:text-red-500 3xl:text-blue-500 ">
         Hi, my name is Henrique
       </h3>
       <h1 className="text-4xl font-black text-center text-[var(--clr-slate400)] text-wrap px-20 lg:text-5xl">

@@ -117,13 +117,13 @@ const Experience = ({ sectionHeader }) => {
               onClick={() => setExpandedIndex(index)}
               key={index}
               className={`pt-6 pb-3 px-6 relative border-2 border-[var(--clr-teal)]
-                 rounded-lg flex flex-col justify-between items-center bg-[var(--clr-darker)]
-                  transition-all duration-900 ease-in-out  md:min-w-[550px]  
-
+                 rounded-xl flex flex-col justify-between items-center bg-[var(--clr-darker)]
+                  transition-all duration-900 ease-in-out  md:min-w-[550px] flex-1  
                   ${
                     expandedIndex === index
-                      ? "min-h-[600px] max-h-[700px] transition-[height] duration-900 ease-in-out md:max-w-[400px] lg:max-w-[400px] xl:pt-6 xl:pb-3 xl:min-h-fit xl:max-h-[700px] xl:border-2 xl:md:max-w-[400px] xl:lg:max-w-[600px] xl:w-full xl:h-full xl:px-10"
-                      : // Hide the card when it's not expanded
+                      ? //style for expanded card
+                        "min-h-[600px] max-h-[700px] transition-[height] duration-900 ease-in-out md:max-w-[400px] lg:max-w-[400px] xl:pt-6 xl:pb-3 xl:min-h-fit xl:max-h-[700px] xl:border-2 xl:md:max-w-[400px] xl:lg:max-w-[600px] xl:w-full xl:h-full xl:px-10"
+                      : // Hide the card when it's not expanded on xl screens
                       expandedIndex !== null &&
                         expandedIndex !== index &&
                         window.innerWidth >= 1280
@@ -133,7 +133,7 @@ const Experience = ({ sectionHeader }) => {
             >
               {/* Backdrop */}
               <div
-                className={`absolute top-0 right-0 w-full h-full rounded-lg transition-all duration-900 ease-in-out ${
+                className={`absolute top-0 right-0 w-full h-full rounded-xl transition-all duration-900 ease-in-out ${
                   expandedIndex !== null && expandedIndex !== index
                     ? "xl:backdrop-blur-sm xl:z-10"
                     : ""
