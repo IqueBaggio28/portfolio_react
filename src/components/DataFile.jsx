@@ -6,6 +6,9 @@ import {
   faPython,
   faJava,
   faAws,
+  faReact,
+  faCss3Alt,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 
@@ -115,5 +118,116 @@ export const experienceData = [
       { svg: "images/cpp-icon.svg", color: "#3776ab" },
       { svg: "images/c-icon.svg", color: "#3776ab" },
     ],
+  },
+];
+
+export const SkillsData = [
+  {
+    name: "JavaScript",
+    icon: faJsSquare,
+    color: "yellow",
+    level: 7,
+    description:
+      "JavaScript is a versatile programming language used to create dynamic and interactive web applications, powering both frontend and backend development through frameworks like React and Node.js.",
+  },
+  {
+    name: "React",
+    icon: faReact,
+    color: "#61DBFB",
+    level: 9,
+    description:
+      "React is a popular JavaScript library for building fast, interactive user interfaces. It uses a component-based architecture and virtual DOM to efficiently manage updates and build scalable frontend applications.",
+  },
+  {
+    name: "HTML",
+    icon: faHtml5,
+    color: "#e34c26",
+    level: 8,
+    description:
+      "HTML is the standard markup language for structuring content on the web. It forms the backbone of all websites, defining the layout and semantic structure of web pages.",
+  },
+  {
+    name: "empty",
+  },
+  {
+    name: "empty",
+  },
+  {
+    name: "CSS",
+    icon: faCss,
+    color: "#264de4",
+    level: 9,
+    description:
+      "CSS is a styling language used to control the presentation and layout of web pages. It allows developers to design visually engaging websites with responsiveness and animations.",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: faCss3Alt,
+    color: "#38bdf8",
+    level: 5,
+    description:
+      "Tailwind CSS is a utility-first CSS framework that enables developers to style applications directly within HTML by applying pre-defined classes, leading to fast and responsive UI development.",
+  },
+  {
+    name: "Python",
+    icon: faPython,
+    color: "#306998",
+    level: 7,
+    description:
+      "Python is a powerful, high-level programming language known for its readability and broad applicability in fields like web development, automation, data analysis, and AI.",
+  },
+  {
+    name: "C++",
+    svg: "images/cpp-icon.svg",
+    color: "#f34b7d",
+    level: 5,
+    description:
+      "C++ is a high-performance programming language commonly used for system/software development and game programming, known for its object-oriented features and close-to-hardware efficiency.",
+  },
+  {
+    name: "C#",
+    svg: "images/csharp-icon.svg",
+    color: "#9B4F96",
+    level: 5,
+    description:
+      "C# is a modern, object-oriented language developed by Microsoft. It is primarily used for building Windows applications, games with Unity, and enterprise software on the .NET framework.",
+  },
+  {
+    name: "Git",
+    icon: faGithub,
+    color: "#fff",
+    level: 8,
+    description:
+      "Git is a version control system that enables developers to track changes in their codebase, collaborate with others, and manage project history efficiently across distributed teams.",
+  },
+  {
+    name: "empty",
+  },
+  {
+    name: "empty",
+  },
+  {
+    name: "Java",
+    icon: faJava,
+    color: "#007396",
+    level: 4,
+    description:
+      "Java is a robust, object-oriented programming language used in enterprise applications, Android development, and large-scale systems due to its platform independence and stability.",
+  },
+  {
+    name: "AWS",
+    icon: faAws,
+    color: "#FF9900",
+    level: 4,
+    description:
+      "AWS (Amazon Web Services) is a leading cloud platform that offers scalable computing, storage, and deployment tools. It is widely used for hosting, databases, serverless apps, and machine learning.",
+  },
+  {
+    name: "PHP",
+    icon: faPhp,
+    color: "#8892be",
+    level: 5,
+    description:
+      "PHP is a widely-used server-side scripting language suited for web development. It powers many dynamic websites and is especially known for its role in content management systems like WordPress.",
   },
 ];
