@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar.jsx";
 
 const Hero = () => {
   return (
-    <section className="container_sec lg:px-60 xl:px-80 ">
+    <section className="container_sec lg:px-60 xl:px-80 cursor- ">
       <Avatar className="w-30 h-30 overflow-hidden lg:w-40 lg:h-40">
         <AvatarImage
           src="images/hero_img.jpg"
@@ -11,7 +11,7 @@ const Hero = () => {
         />
       </Avatar>
 
-      <h3 className="text-[var(--clr-slate600)] text-lg font-bold lg:text-xl 2xl:text-red-500 3xl:text-blue-500 ">
+      <h3 className="text-[var(--clr-slate600)] text-lg font-bold lg:text-xl 2xl:text-blue-500">
         Hi, my name is Henrique
       </h3>
       <h1 className="text-4xl font-black text-center text-[var(--clr-slate400)] text-wrap px-20 lg:text-5xl">
@@ -19,17 +19,17 @@ const Hero = () => {
       </h1>
       <p className="text-center text-[var(--clr-slate600)] font-medium lg:text-lg lg:pb-4">
         A dedicated Software Engineering and passionate developer with hands-on
-        experience in full-stack development.
+        experience in full-stack development.&nbsp;
         <span className="text-orange-500 font-semibold">
-          Proficient in JavaScript (React), Python, C++, and PHP
+          • Proficient in JavaScript (React), Python, C++, and PHP •
         </span>
-        , with a strong foundation in
+        &nbsp; , with a strong foundation in
         <span className="text-teal-400">
           {" "}
-          object-oriented programming, data structures, algorithms, and SQL
+          object-oriented programming, data structures, algorithms, and SQL.
         </span>
-        . I’ve contributed to real-world applications through internships,
-        research, and teaching, and I’m always looking to build solutions that
+        &nbsp;I've contributed to real-world applications through internships,
+        research, and teaching, and I'm always looking to build solutions that
         make an impact.
       </p>
 
