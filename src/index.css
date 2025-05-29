@@ -13,16 +13,6 @@
   --clr-teal: #0d9488;
   --clr-orange: #ea580c;
 }
-/*@theme {*/
-/*  --color-dark: #0f0c0b;*/
-/*  --color-light: #f1f5f9 ;*/
-/*  --color-slate400: #94a3b8;*/
-/*  --color-slate600: #475569;*/
-/*  --color-slate700: #334155;*/
-/*  --color-slate800: #1e293b;*/
-/*  --color-teal_: #0d9488;*/
-/*  --color-orange_: #ea580c ;*/
-/*}*/
 
 @keyframes float {
   from,
@@ -65,7 +55,7 @@
   }
 
   .container_sec {
-    @apply flex flex-col gap-4 items-center justify-center min-h-screen mb-40 px-10 md:px-40;
+    @apply flex flex-col gap-4 items-center justify-center min-h-screen mb-40 px-10 md:px-40 xl:px-60;
   }
   .line {
     @apply flex justify-between items-center;

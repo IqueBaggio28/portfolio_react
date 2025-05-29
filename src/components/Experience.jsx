@@ -28,7 +28,7 @@ const Experience = ({ sectionHeader }) => {
                   ${
                     expandedIndex === index
                       ? //style for expanded card
-                        "min-h-[600px] max-h-[700px] transition-[height] duration-900 ease-in-out md:max-w-[400px] lg:max-w-[400px] xl:pt-6 xl:pb-3 xl:min-h-fit xl:max-h-[700px] xl:border-2 xl:md:max-w-[400px] xl:lg:max-w-[600px] xl:w-full xl:h-full xl:px-10"
+                        "min-h-fit max-h-fit transition-[height] duration-900 ease-in-out md:max-w-[400px] lg:max-w-[400px] xl:pt-6 xl:pb-3 xl:min-h-fit xl:max-h-[700px] xl:border-2 xl:md:max-w-[400px] xl:lg:max-w-[600px] xl:w-full xl:h-full xl:px-10"
                       : // Hide the card when it's not expanded on xl screens
                       expandedIndex !== null &&
                         expandedIndex !== index &&
