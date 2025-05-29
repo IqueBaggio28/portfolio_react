@@ -17,7 +17,7 @@ const Projects = ({ sectionHeader }) => {
           key={index}
         >
           {/* Project image */}
-          <div className="hidden gap-4 flex-col h-fit w-[400px] lg:flex 2xl:w-[450px]">
+          <div className="hidden gap-4 flex-col h-fit w-[400px] lg:flex 2xl:w-[450px] 2xl:gap-10">
             {images.map((image, index) => (
               <img
                 src={image}
@@ -31,14 +31,16 @@ const Projects = ({ sectionHeader }) => {
           {/* Project details */}
           <div className="sticky top-1/4">
             {/* Project name and link */}
-            <div className="flex justify-center relative items-center text-[cyan_] mb-4">
+            <div className="flex justify-center relative items-center text-[cyan_] mb-4 2xl:mb-8">
               <a
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[var(--clr-orange)] transition-all duration-300 ease-in-out relative group"
               >
-                <h3 className="text-3xl text-center md:text-4xl">{name}</h3>
+                <h3 className="text-3xl text-center md:text-4xl 2xl:text-5xl">
+                  {name}
+                </h3>
                 <span className="absolute -bottom-1 left-1/2 w-0 h-[2px] bg-[var(--clr-orange)] group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
                 <FontAwesomeIcon
                   className="absolute right-0 -top-3"
@@ -48,10 +50,10 @@ const Projects = ({ sectionHeader }) => {
               </a>
             </div>
             {/* Project description */}
-            <div className="flex flex-col gap-4 mb-4 lg:w-[355px]">
+            <div className="flex flex-col gap-4 mb-4 lg:w-[355px] 2xl:w-[470px] 2xl:gap-6 2xl:mb-8">
               {description.map((desc, index) => (
                 <p
-                  className="text-center text-[var(--clr-slate400)] md:text-lg"
+                  className="text-center text-[var(--clr-slate400)] md:text-lg 2xl:text-xl"
                   key={index}
                 >
                   {desc}
@@ -65,12 +67,12 @@ const Projects = ({ sectionHeader }) => {
                   <img
                     src={svg}
                     alt={name}
-                    className={`w-12 h-12 hover:scale-120 transition-all duration-300 ease-in-out ${color}`}
+                    className={`w-12 h-12 hover:scale-120 transition-all duration-300 ease-in-out 2xl:w-14 2xl:h-14 ${color}`}
                     key={index}
                   />
                 ) : (
                   <FontAwesomeIcon
-                    className="hover:scale-120 transtion-all duration-300 ease-in-out"
+                    className="hover:scale-120 transtion-all duration-300 ease-in-out 2xl:scale-120"
                     icon={icon}
                     color={color}
                     size="xl"
