@@ -86,7 +86,7 @@
   }
 
   .fancy-letter {
-    @apply text-3xl uppercase m-0 sm:text-4xl md:text-5xl;
+    @apply text-3xl uppercase m-0 sm:text-4xl md:text-5xl 2xl:text-6xl;
   }
 }
 
