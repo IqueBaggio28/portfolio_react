@@ -179,7 +179,7 @@ export const SkillsData = [
   {
     name: "C++",
     svg: "images/cpp-icon.svg",
-    color: "#f34b7d",
+    color: "#306998",
     level: 5,
     description:
       "C++ is a high-performance programming language commonly used for system/software development and game programming, known for its object-oriented features and close-to-hardware efficiency.",

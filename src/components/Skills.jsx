@@ -15,23 +15,23 @@ const Skills = ({ sectionHeader }) => {
     setPDescription(technologies[techIndex]?.description);
   }, [techIndex]);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => setTechIndex(null), 15000);
-    return () => clearTimeout(timeout);
-  }, [techIndex]);
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => setTechIndex(null), 15000);
+  //   return () => clearTimeout(timeout);
+  // }, [techIndex]);
 
   return (
     <section id="skills" className="container_sec">
       <h2 className="sectionHeader">{sectionHeader}</h2>
 
-      <div className="grid grid-rows-2 place-items-center gap-10  lg:grid-cols-2 lg:grid-rows-0 lg:justify-between ">
-        <div className="grid grid-cols-3 grid-rows-4 gap-6  md:grid-cols-4">
+      <div className="grid grid-rows-2 place-items-center gap-10  lg:grid-cols-2 lg:grid-rows-0 lg:justify-between 2xl:gap-16">
+        <div className="grid grid-cols-3 grid-rows-4 gap-6  md:grid-cols-4 2xl:gap-8">
           {technologies.map(({ name, icon, color, level, svg }, index) =>
             name !== "empty" ? (
               <div
                 onClick={() => setTechIndex(index)}
                 key={index}
-                className=" group grid place-items-center  rounded-full h-20 w-20 cursor-pointer "
+                className=" group grid place-items-center rounded-full h-20 w-20 cursor-pointer"
               >
                 {!svg ? (
                   <FontAwesomeIcon
@@ -39,13 +39,13 @@ const Skills = ({ sectionHeader }) => {
                     color={color}
                     size="4x"
                     key={index}
-                    className="group-hover:scale-120 group-active:scale-90 transition-all duration-300 ease-in-out   "
+                    className="group-hover:scale-120 group-active:scale-90 group-hover:shadow- transition-all duration-300 ease-in-out 2xl:scale-110 group-hover:2xl:scale-130"
                   />
                 ) : (
                   <img
                     key={index}
                     src={svg}
-                    className="h-16 group-hover:scale-120 group-active:scale-90 transition-all duration-300 ease-in-out "
+                    className="h-16 group-hover:scale-120 group-active:scale-90 transition-all duration-300 ease-in-out 2xl:h-20"
                   />
                 )}
               </div>
@@ -60,7 +60,7 @@ const Skills = ({ sectionHeader }) => {
           } md:w-[520px]`}
         >
           <div>
-            <p className="text-2xl text-center lg:text-end">
+            <p className="text-2xl text-center lg:text-end 2xl:text-3xl">
               {pDescription === "Click for More!" ? (
                 pDescription
               ) : (
@@ -75,17 +75,17 @@ const Skills = ({ sectionHeader }) => {
           </div>
 
           <div
-            className={`transition-opacity duration-300 mt-4 ${
+            className={`transition-opacity duration-300 mt-4 2xl:mt-6 ${
               techIndex === null
                 ? "opacity-0 pointer-events-none"
                 : "opacity-100"
             }`}
           >
-            <div className="flex items-center justify-between text-[var(--clr-slate400)] font-['Press_Start_2P'] text-[10px] ">
+            <div className="flex items-center justify-between text-[var(--clr-slate400)] font-['Press_Start_2P'] text-[10px] 2xl:text-sm">
               <p>Experience: </p>
               <p>{technologies[techIndex]?.level}/10</p>
             </div>
-            <div className="w-42 h-7 border-2 flex gap-1 justify-start items-center px-1 relative">
+            <div className="w-42 h-7 border-2 flex gap-1 justify-start items-center px-1 relative 2xl:h-8 2xl:w-52">
               <div className="absolute -left-1 -bottom-1 bg-[var(--clr-dark)] w-1 h-1"></div>
               <div className="absolute -right-1 -top-1 bg-[var(--clr-dark)] w-1 h-1"></div>
               <div className="absolute -left-1 -top-1 bg-[var(--clr-dark)] w-1 h-1"></div>
