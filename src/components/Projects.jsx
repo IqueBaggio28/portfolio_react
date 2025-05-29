@@ -17,7 +17,7 @@ const Projects = ({ sectionHeader }) => {
           key={index}
         >
           {/* Project image */}
-          <div className="hidden gap-4 flex-col h-fit w-[400px] lg:flex">
+          <div className="hidden gap-4 flex-col h-fit w-[400px] lg:flex 2xl:w-[450px]">
             {images.map((image, index) => (
               <img
                 src={image}

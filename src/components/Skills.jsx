@@ -15,10 +15,10 @@ const Skills = ({ sectionHeader }) => {
     setPDescription(technologies[techIndex]?.description);
   }, [techIndex]);
 
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => setTechIndex(null), 15000);
-  //   return () => clearTimeout(timeout);
-  // }, [techIndex]);
+  useEffect(() => {
+    const timeout = setTimeout(() => setTechIndex(null), 15000);
+    return () => clearTimeout(timeout);
+  }, [techIndex]);
 
   return (
     <section id="skills" className="container_sec">
