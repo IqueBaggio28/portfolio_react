@@ -309,6 +309,9 @@ export const ProjectsData = [
     name: "Portfolio Website",
     description: [
       "I built this portfolio website using React, Tailwind CSS, and Vite. It's a simple and effective tool that I use to showcase my skills and projects.",
+      "I used the React framework to create a dynamic and responsive website that is easy to update and maintain.",
+      "I also used the Tailwind CSS framework to create a modern and stylish design that is easy to use and navigate.",
+      "I also used the React framework to create a dynamic and responsive website that is easy to update and maintain.",
     ],
     images: [
       { img: portfolioHero },

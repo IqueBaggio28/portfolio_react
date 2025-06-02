@@ -37,6 +37,17 @@ const Experience = ({ sectionHeader }) => {
                       : "min-h-60 cursor-pointer hover:md:scale-[1.2] hover:xl:scale-[1.05] hover:xl:shadow-[0_0_15px_rgba(20,184,166,0.3)] transition-all duration-900 ease-in-out xl:min-w-[230px] xl:min-h-120 "
                   } `}
             >
+              {expandedIndex === index && (
+                <button
+                  className="absolute top-1 right-1 opacity-30 z-10 rounded-full px-3 py-2 hover:bg-gray-700"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setExpandedIndex(null);
+                  }}
+                >
+                  <FontAwesomeIcon icon={faClose} size="lg" />
+                </button>
+              )}
               {/* Backdrop */}
               <div
                 className={`absolute top-0 right-0 w-full h-full rounded-xl transition-all duration-900 ease-in-out ${
@@ -48,16 +59,6 @@ const Experience = ({ sectionHeader }) => {
               {/* Expanded */}
               {expandedIndex === index ? (
                 <div className="relative">
-                  <button
-                    className="absolute top-2 right-0 opacity-30 p-4 xl:-right-5"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setExpandedIndex(null);
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faClose} size="lg" />
-                  </button>
-
                   <div className="flex items-center justify-between w-full mb-8">
                     <Avatar
                       className="w-25 h-25 overflow-hidden border border-gray-700"
