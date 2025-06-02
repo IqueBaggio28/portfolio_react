@@ -18,14 +18,25 @@ const Projects = ({ sectionHeader }) => {
         >
           {/* Project image */}
           <div className="hidden gap-4 flex-col h-fit w-[400px] lg:flex 2xl:w-[450px] 2xl:gap-10">
-            {images.map((image, index) => (
-              <img
-                src={image}
-                alt={name}
-                className="w-full h-full object-cover cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
-                key={index}
-              />
-            ))}
+            {images.map((image, index) =>
+              image.img ? (
+                <img
+                  src={image.img}
+                  alt={name}
+                  className="w-full h-full object-contain cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+                  key={index}
+                />
+              ) : (
+                <video
+                  src={image.video}
+                  autoPlay
+                  loop
+                  muted
+                  className="w-full h-full object-cover cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+                  key={index}
+                />
+              )
+            )}
           </div>
 
           {/* Project details */}
@@ -61,21 +72,22 @@ const Projects = ({ sectionHeader }) => {
               ))}
             </div>
             {/* Project stack */}
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center justify-center gap-4 2xl:gap-6">
               {stack.map(({ svg, color, icon }, index) =>
                 svg ? (
                   <img
                     src={svg}
                     alt={name}
-                    className={`w-12 h-12 hover:scale-120 transition-all duration-300 ease-in-out 2xl:w-14 2xl:h-14 ${color}`}
+                    className={`w-10 h-10 hover:scale-120 transition-all duration-300 ease-in-out ${color}`}
                     key={index}
                   />
                 ) : (
                   <FontAwesomeIcon
-                    className="hover:scale-120 transtion-all duration-300 ease-in-out 2xl:scale-120"
+                    className="hover:scale-120 transtion-all duration-300 ease-in-out 2xl:scale-150 2xl:hover:scale-170"
                     icon={icon}
                     color={color}
-                    size="xl"
+                    size="2x"
+                    key={index}
                   />
                 )
               )}

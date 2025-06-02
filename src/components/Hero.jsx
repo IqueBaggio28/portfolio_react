@@ -1,14 +1,15 @@
 import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar.jsx";
+import heroImg from "./images/hero_img.jpg";
 
 const Hero = () => {
   return (
     <section
-      className={`container_sec lg:px-60 xl:px-80 2xl:px-96 xl:gap-7 @container`}
+      className={`container_sec lg:px-60 xl:px-80 2xl:px-96 xl:gap-7 xl:px-60`}
     >
       <Avatar className="w-30 h-30 overflow-hidden lg:w-40 lg:h-40">
         <AvatarImage
-          src="images/hero_img.jpg"
+          src={heroImg}
           className="rounded-full object-cover object-top scale-125 lg:scale-100"
         />
       </Avatar>

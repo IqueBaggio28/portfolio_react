@@ -36,7 +36,7 @@ const Skills = ({ sectionHeader }) => {
                 {!svg ? (
                   <FontAwesomeIcon
                     icon={icon}
-                    color={color}
+                    color={color ? color : ""}
                     size="4x"
                     key={index}
                     className="group-hover:scale-120 group-active:scale-90 group-hover:shadow- transition-all duration-300 ease-in-out 2xl:scale-110 group-hover:2xl:scale-130"

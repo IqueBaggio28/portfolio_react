@@ -3,14 +3,46 @@ import {
   faCss,
   faHtml5,
   faPhp,
-  faPython,
-  faJava,
+
+  //   faJava,
   faAws,
   faReact,
-  faCss3Alt,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+
+// ExperienceData images
+import rvIcon from "./images/rv-icon.png";
+import ottimizzaIcon from "./images/ottimizza-icon.png";
+import fgcuIcon from "./images/fgcu-icon.png";
+import cppIcon from "./images/cpp-icon.svg"; // Assuming it's for experienceData based on usage
+import cIcon from "./images/c-icon.svg"; // Assuming it's for experienceData based on usage
+
+// SkillsData images
+// cppIcon is already imported above
+// csharpIcon will be imported if present in SkillsData, let's assume src/components/images/csharp-icon.svg
+import csharpIcon from "./images/csharp-icon.svg";
+import tailwindIcon from "./images/tailwind-icon.png";
+import pythonIcon from "./images/python-icon.png";
+import javaIcon from "./images/java-icon.png";
+
+// ProjectsData images
+import pokemonVideo from "./images/projects/pokemon-video.mp4";
+import pokeMenuWIP from "./images/projects/Poke_Menu_WIP.png";
+import pokeSelect1 from "./images/projects/Poke_Select_1.png";
+import charBattle1frame from "./images/projects/char_battle_1frame.png";
+import squirBattle1frame from "./images/projects/squir_battle_1frame.png";
+import bulbaBattle1frame from "./images/projects/bulba_battle_1frame.png";
+
+// Pomodoro Timer images
+import pomodoroImg from "./images/projects/pomodoro-img.png";
+import pomodoroVideo from "./images/projects/pomodoro-video.mp4";
+
+// Portfolio Website images
+import portfolioHero from "./images/projects/portfolio-hero.png";
+import portfolioAbout from "./images/projects/portfolio-about.png";
+import portfolioSkills from "./images/projects/portfolio-skills.png";
+import portfolioContact from "./images/projects/portfolio-contact.png";
 
 export const AboutData = [
   {
@@ -29,7 +61,7 @@ export const AboutData = [
       "I'm passionate about front-end and full-stack development, and I'm always working to sharpen my " +
       "skills. I love building smooth, responsive web apps using React, JavaScript, and backend tools " +
       "like PHP and SQL. My goal is to keep learning, work on real projects, contribute to open-source, " +
-      "and grow my network in the tech community. I’m excited to create user-friendly, high-impact " +
+      "and grow my network in the tech community. I'm excited to create user-friendly, high-impact " +
       "applications while constantly improving and staying adaptable in this fast-moving industry.",
   },
 ];
@@ -38,7 +70,7 @@ export const experienceData = [
   {
     name: "Rentvine",
     title: "FRONT-END DEVELOPER (I)",
-    companyImg: "images/rv-icon.png",
+    companyImg: rvIcon,
     description: [
       "At Rentvine, I work with a full-stack team to build and maintain dynamic web applications. My primary role focuses on implementing front-end features using React.",
       "I enhance user interfaces for performance and accessibility, ensuring a smooth experience across devices. I also work with PHP and SQL to manage backend logic and maintain database reliability.",
@@ -56,7 +88,7 @@ export const experienceData = [
   {
     name: "Ottimizza Ltda.",
     title: "SFTW ENGINEERING INTERN ",
-    companyImg: "images/ottimizza-icon.png",
+    companyImg: ottimizzaIcon,
     description: [
       "At Ottimizza Automação Contábil in Brazil, I focused on automation projects using AWS Lambda and Python.",
       "One project involved transforming bank statements into a compatible format for internal use across the company. Another extracted text from images in S3 buckets for integration into existing systems.",
@@ -65,7 +97,7 @@ export const experienceData = [
     ],
     date: "June 2023 - Aug 2023",
     stacks: [
-      { icon: faJava, color: "#f89820" },
+      { svg: javaIcon, color: "#f89820" },
       { icon: faDatabase, color: "#3776ab" },
       { icon: faAws, color: "#ff9900" },
     ],
@@ -73,7 +105,7 @@ export const experienceData = [
   {
     name: "Dendritic Hub",
     title: "RESEARCH ASSISTANT",
-    companyImg: "images/fgcu-icon.png",
+    companyImg: fgcuIcon,
     description: [
       "As a Research Assistant under Dr. De Castro at FGCU, I contribute to projects involving Evolutionary Computing.",
       "I use Python, data structures, and algorithms to optimize everyday processes and improve system efficiency.",
@@ -81,12 +113,12 @@ export const experienceData = [
       "This role has strengthened my technical foundation and collaborative skills in an academic setting.",
     ],
     date: "Nov 2023 - Nov 2024",
-    stacks: [{ icon: faPython, color: "#3776ab" }],
+    stacks: [{ svg: pythonIcon, color: "#3776ab" }],
   },
   {
     name: "U.A. Whitaker College of Engineering",
     title: "SFTW ENGINEERING TUTOR",
-    companyImg: "images/fgcu-icon.png",
+    companyImg: fgcuIcon,
     description: [
       "As a Software Engineering Tutor at FGCU, I provide academic support to students learning C, C++, and Python.",
       "I simplify topics like pointers, loops, and object-oriented programming through one-on-one and group sessions.",
@@ -95,16 +127,16 @@ export const experienceData = [
     ],
     date: "Aug 2023 - Nov 2024",
     stacks: [
-      { icon: faPython, color: "#3776ab" },
-      { icon: faJava, color: "#f89820" },
-      { svg: "images/cpp-icon.svg", color: "#3776ab" },
-      { svg: "images/c-icon.svg", color: "#3776ab" },
+      { svg: pythonIcon, color: "#3776ab" },
+      { svg: javaIcon, color: "#f89820" },
+      { svg: cppIcon, color: "#3776ab" },
+      { svg: cIcon, color: "#3776ab" },
     ],
   },
   {
     name: "U.A. Whitaker College of Engineering",
     title: "TEACHING ASSISTANT ",
-    companyImg: "images/fgcu-icon.png",
+    companyImg: fgcuIcon,
     description: [
       "As a Teaching Assistant for Intro to Computer Science and Programming I & II, I support over 140 students at FGCU.",
       "I assist with grading, provide detailed feedback on assignments, and help students grasp core programming concepts.",
@@ -113,10 +145,10 @@ export const experienceData = [
     ],
     date: "Aug 2023 - Nov 2024",
     stacks: [
-      { icon: faPython, color: "#3776ab" },
-      { icon: faJava, color: "#f89820" },
-      { svg: "images/cpp-icon.svg", color: "#3776ab" },
-      { svg: "images/c-icon.svg", color: "#3776ab" },
+      { svg: pythonIcon, color: "#3776ab" },
+      { svg: javaIcon, color: "#f89820" },
+      { svg: cppIcon, color: "#3776ab" },
+      { svg: cIcon, color: "#3776ab" },
     ],
   },
 ];
@@ -162,23 +194,31 @@ export const SkillsData = [
   },
   {
     name: "Tailwind CSS",
-    icon: faCss3Alt,
+    svg: tailwindIcon,
     color: "#38bdf8",
-    level: 5,
+    level: 6,
     description:
       "Tailwind CSS is a utility-first CSS framework that enables developers to style applications directly within HTML by applying pre-defined classes, leading to fast and responsive UI development.",
   },
   {
     name: "Python",
-    icon: faPython,
+    svg: pythonIcon,
     color: "#306998",
     level: 7,
     description:
       "Python is a powerful, high-level programming language known for its readability and broad applicability in fields like web development, automation, data analysis, and AI.",
   },
   {
+    name: "Java",
+    svg: javaIcon,
+    color: "#f89820",
+    level: 4,
+    description:
+      "Java is a robust, object-oriented programming language used in enterprise applications, Android development, and large-scale systems due to its platform independence and stability.",
+  },
+  {
     name: "C++",
-    svg: "images/cpp-icon.svg",
+    svg: cppIcon,
     color: "#306998",
     level: 5,
     description:
@@ -186,11 +226,18 @@ export const SkillsData = [
   },
   {
     name: "C#",
-    svg: "images/csharp-icon.svg",
+    svg: csharpIcon,
     color: "#9B4F96",
     level: 5,
     description:
       "C# is a modern, object-oriented language developed by Microsoft. It is primarily used for building Windows applications, games with Unity, and enterprise software on the .NET framework.",
+  },
+
+  {
+    name: "empty",
+  },
+  {
+    name: "empty",
   },
   {
     name: "Git",
@@ -200,20 +247,7 @@ export const SkillsData = [
     description:
       "Git is a version control system that enables developers to track changes in their codebase, collaborate with others, and manage project history efficiently across distributed teams.",
   },
-  {
-    name: "empty",
-  },
-  {
-    name: "empty",
-  },
-  {
-    name: "Java",
-    icon: faJava,
-    color: "#007396",
-    level: 4,
-    description:
-      "Java is a robust, object-oriented programming language used in enterprise applications, Android development, and large-scale systems due to its platform independence and stability.",
-  },
+
   {
     name: "AWS",
     icon: faAws,
@@ -241,56 +275,53 @@ export const ProjectsData = [
       'The game offered players the choice of selecting between Charmander, Bulbasaur, and Squirtle. During battles, we incorporated two main moves: "Tackle," dealing base damage, and an "Elementary" attack, which varied in effectiveness based on the opponent, adhering closely to the original game\'s logic.',
     ],
     images: [
-      "images/projects/Poke_Menu_WIP.png",
-      "images/projects/Poke_Select_1.png",
-      "images/projects/char_battle_1frame.png",
-      "images/projects/squir_battle_1frame.png",
-      "images/projects/bulba_battle_1frame.png",
+      { video: pokemonVideo },
+      { img: pokeMenuWIP },
+      { img: pokeSelect1 },
+      { img: charBattle1frame },
+      { img: squirBattle1frame },
+      { img: bulbaBattle1frame },
     ],
     stack: [
-      { svg: "images/cpp-icon.svg", color: "#f34b7d" },
-      { svg: "images/sfml-icon.png", color: "#8CC84B" },
+      { svg: cppIcon, color: "#3776ab" },
+      { svg: cIcon, color: "#3776ab" },
     ],
-    link: "https://github.com/IqueBaggio28/Pokemon",
+    link: "https://github.com/IqueBaggio28/Portfolio",
   },
   {
-    name: "Pokemon Cerulean++",
+    name: "Pomodoro Timer",
     description: [
-      "As part of our group project for Programming I, we were tasked with creating a GUI project using the C++ library SFML.",
-      "Our aim was to closely replicate the Pokemon battling system using a point-and-click SFML GUI system, effectively reverse-engineering its mechanics.",
-      'The game offered players the choice of selecting between Charmander, Bulbasaur, and Squirtle. During battles, we incorporated two main moves: "Tackle," dealing base damage, and an "Elementary" attack, which varied in effectiveness based on the opponent, adhering closely to the original game\'s logic.',
+      "A Pomodoro Timer is a time management tool that helps you stay focused and productive by breaking your work into 25-minute intervals, known as pomodoros, with 5-minute breaks in between.",
+      "The timer is designed to enhance productivity and prevent burnout by providing a structured approach to work and rest.",
+      "I built this timer using HTML, CSS, and JavaScript. It's a simple and effective tool that I use to stay focused and productive.",
+      "I also added a sound effect to notify me when the timer is up, and a progress bar to track my progress.",
     ],
-    images: [
-      "images/projects/Poke_Menu_WIP.png",
-      "images/projects/Poke_Select_1.png",
-      "images/projects/char_battle_1frame.png",
-      "images/projects/squir_battle_1frame.png",
-      "images/projects/bulba_battle_1frame.png",
-    ],
+    images: [{ video: pomodoroVideo }, { img: pomodoroImg }],
     stack: [
-      { svg: "images/cpp-icon.svg", color: "#f34b7d" },
-      { svg: "images/sfml-icon.png", color: "#8CC84B" },
+      { icon: faJsSquare, color: "yellow" },
+      { icon: faHtml5, color: "#e34c26" },
+      { icon: faCss, color: "#264de4" },
+      { icon: faReact, color: "#61DBFB" },
     ],
-    link: "https://github.com/IqueBaggio28/Pokemon",
+    link: "https://github.com/IqueBaggio28/pomodoro_timer",
   },
   {
-    name: "Pokemon Cerulean++",
+    name: "Portfolio Website",
     description: [
-      "As part of our group project for Programming I, we were tasked with creating a GUI project using the C++ library SFML.",
-      "Our aim was to closely replicate the Pokemon battling system using a point-and-click SFML GUI system, effectively reverse-engineering its mechanics.",
-      'The game offered players the choice of selecting between Charmander, Bulbasaur, and Squirtle. During battles, we incorporated two main moves: "Tackle," dealing base damage, and an "Elementary" attack, which varied in effectiveness based on the opponent, adhering closely to the original game\'s logic.',
+      "I built this portfolio website using React, Tailwind CSS, and Vite. It's a simple and effective tool that I use to showcase my skills and projects.",
     ],
     images: [
-      "images/projects/Poke_Menu_WIP.png",
-      "images/projects/Poke_Select_1.png",
-      "images/projects/char_battle_1frame.png",
-      "images/projects/squir_battle_1frame.png",
-      "images/projects/bulba_battle_1frame.png",
+      { img: portfolioHero },
+      { img: portfolioAbout },
+      { img: portfolioSkills },
+      { img: portfolioContact },
     ],
     stack: [
-      { svg: "images/cpp-icon.svg", color: "#f34b7d" },
-      { svg: "images/sfml-icon.png", color: "#8CC84B" },
+      { icon: faJsSquare, color: "yellow" },
+      { icon: faHtml5, color: "#e34c26" },
+      { icon: faCss, color: "#264de4" },
+      { icon: faReact, color: "#61DBFB" },
     ],
-    link: "https://github.com/IqueBaggio28/Pokemon",
+    link: "https://github.com/IqueBaggio28/Portfolio",
   },
 ];
