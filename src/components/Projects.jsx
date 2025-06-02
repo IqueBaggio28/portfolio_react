@@ -52,12 +52,13 @@ const Projects = ({ sectionHeader }) => {
                 <h3 className="text-3xl text-center md:text-4xl 2xl:text-5xl">
                   {name}
                 </h3>
-                <span className="absolute -bottom-1 left-1/2 w-0 h-[2px] bg-[var(--clr-orange)] group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
                 <FontAwesomeIcon
-                  className="absolute right-0 -top-3"
+                  className="absolute -right-8 top-1/2 -translate-y-1/2"
                   icon={faArrowUpRightFromSquare}
                   size="lg"
+                  color="var(--clr-orange)"
                 />
+                <span className="absolute -bottom-1 left-1/2 w-0 h-[2px] bg-[var(--clr-orange)] group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
               </a>
             </div>
             {/* Project description */}
