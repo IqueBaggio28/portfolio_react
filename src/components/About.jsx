@@ -23,7 +23,7 @@ const About = ({ sectionHeader }) => {
             </div>
           ))}
         </div>
-        <div className="hidden xl:block w-1/3 ">
+        <div className="w-full xl:w-1/3">
           <img
             src={aboutImage2}
             alt="about"

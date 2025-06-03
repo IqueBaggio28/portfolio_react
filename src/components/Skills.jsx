@@ -37,7 +37,7 @@ const Skills = ({ sectionHeader }) => {
                   <FontAwesomeIcon
                     icon={icon}
                     color={color ? color : ""}
-                    size="4x"
+                    size="3x"
                     key={index}
                     className="group-hover:scale-120 group-active:scale-90 group-hover:shadow- transition-all duration-300 ease-in-out 2xl:scale-110 group-hover:2xl:scale-130"
                   />
@@ -45,7 +45,7 @@ const Skills = ({ sectionHeader }) => {
                   <img
                     key={index}
                     src={svg}
-                    className="h-16 group-hover:scale-120 group-active:scale-90 transition-all duration-300 ease-in-out 2xl:h-20"
+                    className="h-14 group-hover:scale-120 group-active:scale-90 transition-all duration-300 ease-in-out 2xl:h-16"
                   />
                 )}
               </div>
@@ -60,7 +60,7 @@ const Skills = ({ sectionHeader }) => {
           } md:w-[520px]`}
         >
           <div>
-            <p className="text-2xl text-center lg:text-end 2xl:text-3xl">
+            <p className="text-lg text-center lg:text-end 2xl:text-3xl">
               {pDescription === "Click for More!" ? (
                 pDescription
               ) : (
