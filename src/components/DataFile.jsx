@@ -44,7 +44,7 @@ import portfolioContact from "./images/projects/portfolio-contact.png";
 
 //Senior Project images
 import SPpdf from "./images/projects/SP-poster.png";
-
+import SPpresentation from "./images/projects/SP-presentation.png";
 
 export const AboutData = [
   {
@@ -321,6 +321,7 @@ export const ProjectsData = [
       { img: portfolioSkills },
       { img: portfolioContact },
       { img: SPpdf },
+      { img: SPpresentation },
     ],
     stack: [
       { icon: faJsSquare, color: "yellow" },
