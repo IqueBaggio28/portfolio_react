@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fontsource/press-start-2p"; // Import the pixel font
 import { SkillsData } from "./DataFile.jsx";
-import AnimationOnX from "./AnimationOnX.jsx";
+// import AnimationOnX from "./AnimationOnX.jsx";
 import AnimatedSection from "./AnimatedSection.jsx";
 
 const Skills = ({ sectionHeader }) => {
@@ -31,7 +31,7 @@ const Skills = ({ sectionHeader }) => {
         <div className="grid grid-cols-3 grid-rows-4 gap-6  md:grid-cols-4 2xl:gap-8">
           {technologies.map(({ name, icon, color, level, svg }, index) =>
             name !== "empty" ? (
-              <AnimationOnX
+              <AnimatedSection
                 direction={index % 2 === 0 ? "right" : "left"}
                 onClick={() => setTechIndex(index)}
                 key={index}
@@ -52,7 +52,7 @@ const Skills = ({ sectionHeader }) => {
                     className="h-14 group-hover:scale-120 group-active:scale-90 transition-all duration-300 ease-in-out 2xl:h-16"
                   />
                 )}
-              </AnimationOnX>
+              </AnimatedSection>
             ) : (
               <span key={index} className="hidden md:grid"></span>
             )
@@ -63,7 +63,7 @@ const Skills = ({ sectionHeader }) => {
             techIndex == null ? "items-center" : "items-end"
           } md:w-[520px]`}
         >
-          <AnimationOnX>
+          <AnimatedSection>
             <p className="text-lg text-center lg:text-end 2xl:text-3xl">
               {pDescription === "Click for More!" ? (
                 pDescription
@@ -76,7 +76,7 @@ const Skills = ({ sectionHeader }) => {
                 </>
               )}
             </p>
-          </AnimationOnX>
+          </AnimatedSection>
 
           <div
             className={`transition-opacity duration-300 mt-4 2xl:mt-6 ${

@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
 import MenuIcon from "./MenuIcon";
+import AnimatedSection from "./AnimatedSection.jsx";
 
 const Header = ({ setNavBarOpen, navBarOpen }) => {
   return (
     <div className="fixed top-0 left-0 z-30 ">
-      <div className="hidden  justify-between items-center w-screen h-20 px-10 bg-transparent backdrop-blur-sm xl:h-28 lg:flex xl:px-20">
+      <AnimatedSection className="hidden  justify-between items-center w-screen h-20 px-10 bg-transparent backdrop-blur-sm xl:h-28 lg:flex xl:px-20">
         <div className="flex justify-between items-center gap-8 h-full xl:gap-12">
           <a
             href="https://www.linkedin.com/in/henrique-baggio/"
@@ -46,15 +47,15 @@ const Header = ({ setNavBarOpen, navBarOpen }) => {
             Contact
           </a>
         </div>
-      </div>
-      <div className="h-20 w-full flex items-center pl-7  lg:hidden">
+      </AnimatedSection>
+      <AnimatedSection className="h-20 w-full flex items-center pl-7  lg:hidden">
         <Button
           onClick={() => setNavBarOpen((prev) => !prev)}
           className="bg-[var(--clr-dark)] relative w-10 h-10 flex items-center justify-center"
         >
           <MenuIcon isOpen={navBarOpen} />
         </Button>
-      </div>
+      </AnimatedSection>
     </div>
   );
 };

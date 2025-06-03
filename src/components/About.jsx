@@ -13,19 +13,19 @@ const About = ({ sectionHeader }) => {
         <h2 className="sectionHeader">{sectionHeader}</h2>
       </AnimatedSection>
       <div className="flex flex-col gap-12 xl:flex-row xl:justify-between">
-        <AnimatedSection className="flex flex-col gap-12 xl:w-2/3 2xl:pr-60">
+        <div className="flex flex-col gap-12 xl:w-2/3 2xl:pr-60">
           {aboutMsg.map(({ title, goals }, index) => (
             <div key={index} className="">
-              <h3 className="font-bold text-2xl text-[var(--clr-slate600)] block border-b border-[var(--clr-orange)] pb-2 mb-3 md:text-3xl">
+              <AnimatedSection className="font-bold text-2xl text-[var(--clr-slate600)] block border-b border-[var(--clr-orange)] pb-2 mb-3 md:text-3xl">
                 {title}
-              </h3>
-              <p className="text-[var(--clr-light)] md:text-lg">
+              </AnimatedSection>
+              <AnimatedSection className="text-[var(--clr-light)] md:text-lg">
                 <span className="mx-5"></span>
                 {goals}
-              </p>
+              </AnimatedSection>
             </div>
           ))}
-        </AnimatedSection>
+        </div>
         <AnimatedSection className="w-full xl:w-1/3">
           <img
             src={aboutImage2}

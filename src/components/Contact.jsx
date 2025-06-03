@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import AnimatedSection from "./AnimatedSection.jsx";
 
 const Contact = ({ sectionHeader }) => {
   const contact = {
@@ -94,43 +95,44 @@ const Contact = ({ sectionHeader }) => {
       id="contact"
       className="relative flex flex-col items-center justify-center min-h-screen w-full"
     >
-      <div className="w-full flex flex-col items-center gap-20">
+      <AnimatedSection>
         <h2 className="sectionHeader">{sectionHeader}</h2>
-
+      </AnimatedSection>
+      <div className="w-full flex flex-col items-center gap-20">
         <div className="fancy-text-container cursor-pointer">
-          <div className="fancy-line">
+          <AnimatedSection className="fancy-line">
             {contact.name.map((name, index) => (
               <p className="fancy" key={index}>
                 {name}
                 &nbsp;
               </p>
             ))}
-          </div>
-          <div className="fancy-line">
+          </AnimatedSection>
+          <AnimatedSection className="fancy-line">
             {contact.position.map((position, index) => (
               <p className="fancy" key={index}>
                 {position}
                 &nbsp; &nbsp;
               </p>
             ))}
-          </div>
-          <div className="fancy-line">
+          </AnimatedSection>
+          <AnimatedSection className="fancy-line">
             {contact.location.map((location, index) => (
               <p className="fancy" key={index}>
                 {location}
                 &nbsp;
               </p>
             ))}
-          </div>
-          <div className="fancy-line">
+          </AnimatedSection>
+          <AnimatedSection className="fancy-line">
             {contact.phoneNumber.map((phoneNumber, index) => (
               <p className="fancy" key={index}>
                 {phoneNumber}
                 &nbsp;
               </p>
             ))}
-          </div>
-          <div className="fancy-line flex gap-14 sm:gap-18 md:gap-22 ">
+          </AnimatedSection>
+          <AnimatedSection className="fancy-line flex gap-14 sm:gap-18 md:gap-22 ">
             <a
               className="fancy text-[var(--clr-orange)]"
               href={contact.mail.link}
@@ -147,7 +149,7 @@ const Contact = ({ sectionHeader }) => {
             >
               {contact.linkedin.label}
             </a>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
       <a
