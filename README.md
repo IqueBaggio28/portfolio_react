@@ -1,12 +1,63 @@
-# React + Vite
+# My React Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with React, Vite, and Tailwind CSS to showcase my projects and skills.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive design for various screen sizes.
+- Sections for About Me, Experience, Projects, and Contact.
+- Smooth navigation and user experience.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- Tailwind CSS
+- ESLint
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version X.X.X or higher)
+- npm (version X.X.X or higher)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repository-name.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd your-repository-name
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Project
+
+```bash
+npm run dev
+```
+
+## Available Scripts
+
+- `npm run dev`: Runs the app in development mode.
+- `npm run build`: Builds the app for production.
+- `npm run lint`: Lints the codebase.
+- `npm run preview`: Serves the production build locally for preview.
+
+## Deployment
+
+(Optional: Add details about how the project is deployed, e.g., Netlify, Vercel, GitHub Pages)
+
+## Contributing
+
+(Optional: Add guidelines for contributing if this is an open-source project.)
+
+## License
+
+This project is licensed under the MIT License.

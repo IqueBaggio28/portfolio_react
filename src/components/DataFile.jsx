@@ -3,8 +3,6 @@ import {
   faCss,
   faHtml5,
   faPhp,
-
-  //   faJava,
   faAws,
   faReact,
   faGithub,
@@ -43,6 +41,9 @@ import portfolioHero from "./images/projects/portfolio-hero.png";
 import portfolioAbout from "./images/projects/portfolio-about.png";
 import portfolioSkills from "./images/projects/portfolio-skills.png";
 import portfolioContact from "./images/projects/portfolio-contact.png";
+
+//Senior Project images
+import SPpdf from "./images/projects/SP-poster.png";
 
 export const AboutData = [
   {
@@ -318,12 +319,14 @@ export const ProjectsData = [
       { img: portfolioAbout },
       { img: portfolioSkills },
       { img: portfolioContact },
+      { img: SPpdf },
     ],
     stack: [
       { icon: faJsSquare, color: "yellow" },
       { icon: faHtml5, color: "#e34c26" },
       { icon: faCss, color: "#264de4" },
       { icon: faReact, color: "#61DBFB" },
+      { svg: tailwindIcon, color: "#38bdf8" },
     ],
     link: "https://github.com/IqueBaggio28/Portfolio",
   },
