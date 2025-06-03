@@ -321,7 +321,7 @@ export const ProjectsData = [
       { img: portfolioSkills },
       { img: portfolioContact },
       { img: SPpdf },
-      { img: SPpresentation },
+      { pdf: SPpresentation },
     ],
     stack: [
       { icon: faJsSquare, color: "yellow" },

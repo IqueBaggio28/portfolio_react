@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar.jsx";
 import { experienceData } from "./DataFile.jsx";
+import AnimatedSection from "./AnimatedSection.jsx";
 
 import {
   faArrowUp,
@@ -15,8 +16,10 @@ const Experience = ({ sectionHeader }) => {
 
   return (
     <section id="experience" className="container_sec">
-      <h2 className="sectionHeader">{sectionHeader}</h2>
-      <div className="flex flex-col gap-10 xl:flex-row xl:gap-2">
+      <AnimatedSection>
+        <h2 className="sectionHeader">{sectionHeader}</h2>
+      </AnimatedSection>
+      <AnimatedSection className="flex flex-col gap-10 xl:flex-row xl:gap-2">
         {companies.map(
           ({ name, title, companyImg, description, date, stacks }, index) => (
             <div
@@ -193,7 +196,7 @@ const Experience = ({ sectionHeader }) => {
             </div>
           )
         )}
-      </div>
+      </AnimatedSection>
     </section>
   );
 };
