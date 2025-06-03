@@ -95,7 +95,7 @@ const Skills = ({ sectionHeader }) => {
                 (_, index) => (
                   <div
                     key={index}
-                    className={`w-3 h-4.5 bg-[var(--clr-orange)] `}
+                    className={`w-3 h-4.5 bg-[var(--clr-orange)] 2xl:w-4 `}
                     // ${
                     //   index < 2
                     //     ? "bg-blue-400"
@@ -119,10 +119,3 @@ const Skills = ({ sectionHeader }) => {
 };
 
 export default Skills;
-
-// react, js, html, css, tailwind, python, c++, c#, git, java, aws, php
-
-//  *  *  *
-//     *  *  *
-//  *  *  *
-//     *  *  *
