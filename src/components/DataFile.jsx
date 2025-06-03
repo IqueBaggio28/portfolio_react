@@ -45,6 +45,7 @@ import portfolioContact from "./images/projects/portfolio-contact.png";
 //Senior Project images
 import SPpdf from "./images/projects/SP-poster.png";
 
+
 export const AboutData = [
   {
     title: "Introduction",
