@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faClose, faFile } from "@fortawesome/free-solid-svg-icons";
+import resume from "./images/henrique_baggio_resume_JUL.pdf";
 
 const NavBar = ({ navBarOpen, setNavBarOpen }) => {
   useEffect(() => {
@@ -42,7 +43,7 @@ const NavBar = ({ navBarOpen, setNavBarOpen }) => {
       <div className="flex flex-col h-full items-center justify-center pb-3 ">
         <ul className="flex flex-col gap-4 items-center">
           <li>
-            <a href="#about" onClick={() => setNavBarOpen(false)}>
+            <a href={resume} title="Download Resume" download={resume}>
               <FontAwesomeIcon
                 className="hover:scale-110 hover:text-[var(--clr-slate400)] transition-all duration-300 ease-in-out"
                 icon={faFile}

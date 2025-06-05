@@ -5,6 +5,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
 import MenuIcon from "./MenuIcon";
 import AnimatedSection from "./AnimatedSection.jsx";
+import resume from "./images/henrique_baggio_resume_JUL.pdf";
 
 const Header = ({ setNavBarOpen, navBarOpen }) => {
   return (
@@ -18,7 +19,7 @@ const Header = ({ setNavBarOpen, navBarOpen }) => {
           >
             <FontAwesomeIcon
               icon={faLinkedin}
-              className="hover:scale-110 hover:text-[var(--clr-slate400)] transition-all duration-300 ease-in-out xl:scale-130 "
+              className="hover:scale-110 hover:text-[var(--clr-slate400)] transition-all duration-300 ease-in-out xl:scale-130 hover:xl:scale-140 "
               size="2x"
               color={"var(--clr-slate600)"}
             />
@@ -30,19 +31,21 @@ const Header = ({ setNavBarOpen, navBarOpen }) => {
           >
             <FontAwesomeIcon
               icon={faGithub}
-              className="hover:scale-110 hover:text-[var(--clr-slate400)] transition-all duration-300 ease-in-out xl:scale-130 "
+              className="hover:scale-110 hover:text-[var(--clr-slate400)] transition-all duration-300 ease-in-out xl:scale-130 hover:xl:scale-140 "
               size="2x"
               color={"var(--clr-slate600)"}
             />
           </a>
         </div>
         <div className="flex justify-between items-center gap-8 h-full xl:gap-12">
-          <FontAwesomeIcon
-            icon={faFile}
-            className="hover:scale-110 hover:text-[var(--clr-slate400)] transition-all duration-300 ease-in-out xl:scale-130 "
-            size="2x"
-            color={"var(--clr-slate600)"}
-          />
+          <a href={resume} title="Download Resume" download={resume}>
+            <FontAwesomeIcon
+              icon={faFile}
+              className="hover:scale-110 hover:text-[var(--clr-slate400)] transition-all duration-300 ease-in-out xl:scale-130 hover:xl:scale-140 "
+              size="2x"
+              color={"var(--clr-slate600)"}
+            />
+          </a>
           <a href="#contact" className="btn">
             Contact
           </a>

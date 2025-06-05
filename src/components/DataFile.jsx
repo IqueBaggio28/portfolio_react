@@ -40,9 +40,11 @@ import pomodoroImg from "./images/projects/pomodoro-img.png";
 import pomodoroVideo from "./images/projects/pomodoro-video.mp4";
 
 // Portfolio Website images
+import portfolioVideo from "./images/projects/portfolio-video.mp4";
 import portfolioHero from "./images/projects/portfolio-hero.png";
 import portfolioAbout from "./images/projects/portfolio-about.png";
 import portfolioSkills from "./images/projects/portfolio-skills.png";
+import portfolioProjects from "./images/projects/portfolio-projects.png";
 import portfolioContact from "./images/projects/portfolio-contact.png";
 
 //Senior Project images
@@ -326,12 +328,12 @@ export const ProjectsData = [
       "I also used the React framework to create a dynamic and responsive website that is easy to update and maintain.",
     ],
     images: [
+      { video: portfolioVideo },
       { img: portfolioHero },
       { img: portfolioAbout },
       { img: portfolioSkills },
+      { img: portfolioProjects },
       { img: portfolioContact },
-      { img: SPpdf },
-      // { pdf: SPpresentation },
     ],
     stack: [
       { icon: faJsSquare, color: "yellow" },
