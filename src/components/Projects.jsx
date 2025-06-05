@@ -15,37 +15,12 @@ const Projects = ({ sectionHeader }) => {
       {projects.map(({ name, description, images, stack, link }, index) => (
         <div
           className={`flex flex-col w-full items-center justify-between gap-16 lg:flex-row lg:justify-evenly lg:items-start ${
-            index % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row"
+            index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
           }`}
           key={index}
         >
-          {/* Project images */}
-          <div className="hidden gap-4 flex-col h-fit w-[400px] lg:flex 2xl:w-[450px] 2xl:gap-10">
-            {images.map((image, index) =>
-              image.img ? (
-                <AnimatedSection key={index}>
-                  <img
-                    src={image.img}
-                    alt={name}
-                    className="w-full h-full object-contain cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
-                  />
-                </AnimatedSection>
-              ) : (
-                <AnimatedSection key={index}>
-                  <video
-                    src={image.video}
-                    autoPlay
-                    loop
-                    muted
-                    className="w-full h-full object-cover cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
-                  />
-                </AnimatedSection>
-              )
-            )}
-          </div>
-
           {/* Project details */}
-          <div className="sticky top-1/4">
+          <div className="lg:top-1/4 lg:sticky">
             {/* Project name and link */}
             <AnimatedSection className="flex justify-center relative items-center text-[cyan_] mb-4 2xl:mb-8">
               <a
@@ -98,6 +73,35 @@ const Projects = ({ sectionHeader }) => {
               )}
             </AnimatedSection>
           </div>
+
+          {/* Project images */}
+          <div className="flex gap-1 lg:gap-4 flex-col h-fit w-[400px] 2xl:w-[450px] 2xl:gap-10">
+            {images.map((image, index) =>
+              image.img ? (
+                <AnimatedSection
+                  key={index}
+                  className={`${index !== 0 ? "hidden lg:block" : ""}`}
+                >
+                  <img
+                    src={image.img}
+                    alt={name}
+                    className="w-full h-full object-contain cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+                  />
+                </AnimatedSection>
+              ) : (
+                <AnimatedSection key={index}>
+                  <video
+                    src={image.video}
+                    autoPlay
+                    loop
+                    muted
+                    className="w-full h-full object-cover cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+                  />
+                </AnimatedSection>
+              )
+            )}
+          </div>
+          <div className="w-full h-[1px] bg-[var(--clr-slate400)] lg:hidden"></div>
         </div>
       ))}
     </section>
