@@ -23,6 +23,9 @@ import csharpIcon from "./images/csharp-icon.svg";
 import tailwindIcon from "./images/tailwind-icon.png";
 import pythonIcon from "./images/python-icon.png";
 import javaIcon from "./images/java-icon.png";
+import leafmapIcon from "./images/leafmap-icon.png";
+import pandasIcon from "./images/pandas-icon.png";
+import numpyIcon from "./images/numpy-icon.png";
 
 // ProjectsData images
 import pokemonVideo from "./images/projects/pokemon-video.mp4";
@@ -45,6 +48,9 @@ import portfolioContact from "./images/projects/portfolio-contact.png";
 //Senior Project images
 import SPpdf from "./images/projects/SP-poster.png";
 import SPpresentation from "./images/projects/SP-presentation.png";
+import SPpypi from "./images/projects/SP-pypi.png";
+import SPshipHeatmap from "./images/projects/SP-ship-heatmap.png";
+import SPshipLocation from "./images/projects/SP-ship-location.png";
 
 export const AboutData = [
   {
@@ -118,7 +124,7 @@ export const experienceData = [
     stacks: [{ svg: pythonIcon, color: "#3776ab" }],
   },
   {
-    name: "U.A. Whitaker College of Engineering",
+    name: "U.A. Whitaker College of Eng.",
     title: "SFTW ENGINEERING TUTOR",
     companyImg: fgcuIcon,
     description: [
@@ -136,7 +142,7 @@ export const experienceData = [
     ],
   },
   {
-    name: "U.A. Whitaker College of Engineering",
+    name: "U.A. Whitaker College of Eng.",
     title: "TEACHING ASSISTANT ",
     companyImg: fgcuIcon,
     description: [
@@ -270,6 +276,27 @@ export const SkillsData = [
 
 export const ProjectsData = [
   {
+    name: "Senior Project",
+    description: [
+      "For our Senior Project, my team and I developed **Maritimeviz**, a Python package published on PyPI.",
+      "Maritimeviz is designed to ingest, analyze, and visualize Automatic Identification System (AIS) data for maritime vessels. It offers global map views, rich export options, interactive visualizations using Leafmap, and seamless integration with the Global Fishing Watch API.",
+    ],
+    images: [
+      { img: SPpdf },
+      { img: SPshipHeatmap },
+      { img: SPshipLocation },
+      { img: SPpresentation },
+    ],
+    stack: [
+      { svg: pythonIcon, color: "#3776ab" },
+      { svg: leafmapIcon, color: "#3776ab" },
+      { svg: pandasIcon, color: "#3776ab" },
+      { svg: numpyIcon, color: "#3776ab" },
+    ],
+    link: "https://pypi.org/project/maritimeviz/",
+  },
+
+  {
     name: "Pokemon Cerulean++",
     description: [
       "As part of our group project for Programming I, we were tasked with creating a GUI project using the C++ library SFML.",
@@ -287,6 +314,31 @@ export const ProjectsData = [
     stack: [
       { svg: cppIcon, color: "#3776ab" },
       { svg: cIcon, color: "#3776ab" },
+    ],
+    link: "https://github.com/IqueBaggio28/Pokemon",
+  },
+  {
+    name: "Portfolio Website",
+    description: [
+      "I built this portfolio website using React, Tailwind CSS, and Vite. It's a simple and effective tool that I use to showcase my skills and projects.",
+      "I used the React framework to create a dynamic and responsive website that is easy to update and maintain.",
+      "I also used the Tailwind CSS framework to create a modern and stylish design that is easy to use and navigate.",
+      "I also used the React framework to create a dynamic and responsive website that is easy to update and maintain.",
+    ],
+    images: [
+      { img: portfolioHero },
+      { img: portfolioAbout },
+      { img: portfolioSkills },
+      { img: portfolioContact },
+      { img: SPpdf },
+      // { pdf: SPpresentation },
+    ],
+    stack: [
+      { icon: faJsSquare, color: "yellow" },
+      { icon: faHtml5, color: "#e34c26" },
+      { icon: faCss, color: "#264de4" },
+      { icon: faReact, color: "#61DBFB" },
+      { svg: tailwindIcon, color: "#38bdf8" },
     ],
     link: "https://github.com/IqueBaggio28/Portfolio",
   },
@@ -306,30 +358,5 @@ export const ProjectsData = [
       { icon: faReact, color: "#61DBFB" },
     ],
     link: "https://github.com/IqueBaggio28/pomodoro_timer",
-  },
-  {
-    name: "Portfolio Website",
-    description: [
-      "I built this portfolio website using React, Tailwind CSS, and Vite. It's a simple and effective tool that I use to showcase my skills and projects.",
-      "I used the React framework to create a dynamic and responsive website that is easy to update and maintain.",
-      "I also used the Tailwind CSS framework to create a modern and stylish design that is easy to use and navigate.",
-      "I also used the React framework to create a dynamic and responsive website that is easy to update and maintain.",
-    ],
-    images: [
-      { img: portfolioHero },
-      { img: portfolioAbout },
-      { img: portfolioSkills },
-      { img: portfolioContact },
-      { img: SPpdf },
-      { pdf: SPpresentation },
-    ],
-    stack: [
-      { icon: faJsSquare, color: "yellow" },
-      { icon: faHtml5, color: "#e34c26" },
-      { icon: faCss, color: "#264de4" },
-      { icon: faReact, color: "#61DBFB" },
-      { svg: tailwindIcon, color: "#38bdf8" },
-    ],
-    link: "https://github.com/IqueBaggio28/Portfolio",
   },
 ];

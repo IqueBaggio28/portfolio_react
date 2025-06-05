@@ -19,10 +19,10 @@ const Experience = ({ sectionHeader }) => {
       <AnimatedSection>
         <h2 className="sectionHeader">{sectionHeader}</h2>
       </AnimatedSection>
-      <AnimatedSection className="flex flex-col gap-10 xl:flex-row xl:gap-2">
+      <div className="flex flex-col gap-10 xl:flex-row xl:gap-2">
         {companies.map(
           ({ name, title, companyImg, description, date, stacks }, index) => (
-            <div
+            <AnimatedSection
               onClick={() => setExpandedIndex(index)}
               key={index}
               className={`pt-6 pb-3 px-6 relative border-2 border-[var(--clr-teal)]
@@ -193,10 +193,10 @@ const Experience = ({ sectionHeader }) => {
                   </button>
                 </div>
               )}
-            </div>
+            </AnimatedSection>
           )
         )}
-      </AnimatedSection>
+      </div>
     </section>
   );
 };
