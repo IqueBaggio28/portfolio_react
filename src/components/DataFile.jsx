@@ -57,7 +57,7 @@ import SPshipLocation from "./images/projects/SP-ship-location.png";
 export const AboutData = [
   {
     title: "Introduction",
-    about:
+    goals:
       "Hi, I'm Henrique Baggio! I'm a Brazilian-born Software Engineer with Italian citizenship and a proud " +
       "graduate of Florida Gulf Coast University. Since entering the field, I've been applying and expanding on " +
       "the skills I developed through internships, research, and self-learning. I work across the full stack—using " +
