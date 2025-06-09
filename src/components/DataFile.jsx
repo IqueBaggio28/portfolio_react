@@ -74,9 +74,6 @@ export const AboutData = [
       "fast-moving industry. I'm eager to tackle new challenges, contribute to impactful projects, and stay " +
       "adaptable to grow as a software engineer and deliver high-quality, user-friendly applications.",
   },
-  {
-    title: "Hobbies and Interests",
-  },
 ];
 
 export const experienceData = [
