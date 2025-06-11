@@ -126,7 +126,7 @@ const Projects = ({ sectionHeader }) => {
                   <img
                     src={image.img}
                     alt={name}
-                    className="w-full h-full object-contain cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+                    className="w-full h-full object-contain cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out px-12 sm:px-0"
                   />
                 </AnimatedSection>
               ) : (
