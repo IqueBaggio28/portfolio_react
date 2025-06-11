@@ -4,6 +4,47 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { ProjectsData } from "./DataFile.jsx";
 import AnimatedSection from "./AnimatedSection.jsx";
 
+const Video = ({ src }) => {
+  const videoRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          videoElement.play().catch((error) => {
+            console.error("Error attempting to play video:", error);
+          });
+        } else {
+          videoElement.pause();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(videoElement);
+
+    return () => {
+      if (videoElement) {
+        observer.unobserve(videoElement);
+      }
+    };
+  }, []);
+
+  return (
+    <video
+      ref={videoRef}
+      src={src}
+      loop
+      muted
+      playsInline
+      className="w-full h-full object-cover cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+    />
+  );
+};
+
 const Projects = ({ sectionHeader }) => {
   const projects = ProjectsData;
 
@@ -90,13 +131,7 @@ const Projects = ({ sectionHeader }) => {
                 </AnimatedSection>
               ) : (
                 <AnimatedSection key={index}>
-                  <video
-                    src={image.video}
-                    autoPlay
-                    loop
-                    muted
-                    className="w-full h-full object-cover cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
-                  />
+                  <Video src={image.video} />
                 </AnimatedSection>
               )
             )}
