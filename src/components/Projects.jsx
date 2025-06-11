@@ -40,7 +40,7 @@ const Video = ({ src }) => {
       loop
       muted
       playsInline
-      className="w-full h-full object-cover cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+      className="w-full h-full object-cover cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out px-12 sm:px-0"
     />
   );
 };
