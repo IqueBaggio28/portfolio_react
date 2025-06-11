@@ -16,7 +16,7 @@ const Hero = () => {
       </Avatar>
 
       <h3 className="text-[var(--clr-slate600)] text-lg font-bold lg:text-xl 2xl:text-2xl  ">
-        Hi, my name is Henrique
+        Hi, my name is Henrique (Tutored By Stefan Rodriguez)
       </h3>
       <h1 className="text-4xl font-black text-center text-[var(--clr-slate400)] text-wrap px-20 lg:text-5xl xl:text-6xl 2xl:text-7xl ">
         SOFTWARE ENGINEER
